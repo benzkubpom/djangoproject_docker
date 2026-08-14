@@ -6,7 +6,7 @@ from django.urls import reverse
 # ชื่อสินค้าในฐานข้อมูลเก็บรหัสรุ่นไว้ท้ายชื่อ เช่น 'Power Supply S3809-045'
 CODE_PATTERN = re.compile(r'\s([A-Z0-9]{1,6}-\d{3})$')
 
-# หมวดหมู่ -> คีย์ภาพลายเส้นใน shop/_product_media.html
+# หมวดหมู่ -> คีย์ภาพประกอบใน shop/static/shop/img/products/
 # ใช้เป็นภาพสำรองเมื่อสินค้ายังไม่มีรูปถ่ายในระบบ
 CATEGORY_ICONS = {
     'พาวเวอร์ซัพพลาย': 'psu',
@@ -25,6 +25,18 @@ CATEGORY_ICONS = {
     'อุปกรณ์เครือข่าย': 'network',
     'ชุดหูฟัง': 'headset',
     'จอภาพ': 'monitor',
+}
+
+# โทนสีของภาพประกอบ ต้องตรงกับ VARIANTS ใน shop/management/commands/make_product_images.py
+PHOTO_VARIANTS = ('dark', 'silver', 'white')
+
+# คำบอกสีใน description -> โทนสีของภาพประกอบ
+# เช่น โน้ตบุ๊ก 'จอ 14 นิ้ว FHD, สีขาว' จะได้ภาพเครื่องสีขาว
+COLOR_VARIANTS = {
+    'สีขาว': 'white',
+    'สีเงิน': 'silver',
+    'สีดำ': 'dark',
+    'สีเทาเข้ม': 'dark',
 }
 
 
@@ -54,7 +66,7 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     # รูปสินค้า: อัปโหลดไฟล์เข้า MEDIA_ROOT/products/ หรือชี้ไปยังรูปภายนอกด้วยลิงก์
-    # ทั้งสองช่องเว้นว่างได้ หน้าเว็บจะเปลี่ยนไปใช้ภาพลายเส้นตามหมวดหมู่ให้เอง
+    # ทั้งสองช่องเว้นว่างได้ หน้าเว็บจะเปลี่ยนไปใช้ภาพประกอบตามหมวดหมู่ให้เอง
     image = models.ImageField(
         upload_to='products/', blank=True, verbose_name='รูปสินค้า'
     )
@@ -97,5 +109,22 @@ class Product(models.Model):
 
     @property
     def icon(self):
-        """คีย์ภาพลายเส้นตามหมวดหมู่ ใช้เป็นภาพสำรองเมื่อยังไม่มีรูปถ่าย"""
+        """คีย์ภาพประกอบตามหมวดหมู่ ใช้เป็นภาพสำรองเมื่อยังไม่มีรูปถ่าย"""
         return CATEGORY_ICONS.get(self.category.name, 'generic')
+
+    @property
+    def variant(self):
+        """โทนสีภาพประกอบ: อ่านจากสีใน description ถ้าไม่ระบุก็สลับตาม id"""
+        for word, variant in COLOR_VARIANTS.items():
+            if word in self.description:
+                return variant
+        # สินค้าที่ไม่บอกสี สลับดำ/เงินตาม id เพื่อให้หน้ารวมไม่ซ้ำกันทั้งหน้า
+        return 'dark' if (self.pk or 0) % 2 else 'silver'
+
+    @property
+    def photo_static(self):
+        """path ของภาพประกอบใน static ใช้เมื่อสินค้ายังไม่มีรูปถ่ายจริง
+
+        ไฟล์สร้างด้วย `python manage.py make_product_images`
+        """
+        return f'shop/img/products/{self.icon}-{self.variant}.png'
