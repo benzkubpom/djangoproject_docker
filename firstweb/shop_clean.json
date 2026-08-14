@@ -1,0 +1,2596 @@
+[
+{
+  "model": "shop.brand",
+  "pk": 1,
+  "fields": {
+    "name": "Astra"
+  }
+},
+{
+  "model": "shop.brand",
+  "pk": 2,
+  "fields": {
+    "name": "ZenCore"
+  }
+},
+{
+  "model": "shop.brand",
+  "pk": 3,
+  "fields": {
+    "name": "VoltEdge"
+  }
+},
+{
+  "model": "shop.brand",
+  "pk": 4,
+  "fields": {
+    "name": "Nexora"
+  }
+},
+{
+  "model": "shop.brand",
+  "pk": 5,
+  "fields": {
+    "name": "Orionix"
+  }
+},
+{
+  "model": "shop.brand",
+  "pk": 6,
+  "fields": {
+    "name": "PixelForge"
+  }
+},
+{
+  "model": "shop.brand",
+  "pk": 7,
+  "fields": {
+    "name": "CoreLink"
+  }
+},
+{
+  "model": "shop.brand",
+  "pk": 8,
+  "fields": {
+    "name": "ByteCraft"
+  }
+},
+{
+  "model": "shop.brand",
+  "pk": 9,
+  "fields": {
+    "name": "NovaTech"
+  }
+},
+{
+  "model": "shop.brand",
+  "pk": 10,
+  "fields": {
+    "name": "Quantum"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 1,
+  "fields": {
+    "name": "พาวเวอร์ซัพพลาย"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 2,
+  "fields": {
+    "name": "โน้ตบุ๊ก"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 3,
+  "fields": {
+    "name": "เคสคอมพิวเตอร์"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 4,
+  "fields": {
+    "name": "เมนบอร์ด"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 5,
+  "fields": {
+    "name": "คีย์บอร์ด"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 6,
+  "fields": {
+    "name": "การ์ดจอ"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 7,
+  "fields": {
+    "name": "เครื่องสำรองไฟ"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 8,
+  "fields": {
+    "name": "เว็บแคม"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 9,
+  "fields": {
+    "name": "อุปกรณ์จัดเก็บข้อมูล"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 10,
+  "fields": {
+    "name": "คอมพิวเตอร์ตั้งโต๊ะ"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 11,
+  "fields": {
+    "name": "เมาส์"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 12,
+  "fields": {
+    "name": "ซีพียู"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 13,
+  "fields": {
+    "name": "หน่วยความจำ"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 14,
+  "fields": {
+    "name": "อุปกรณ์เครือข่าย"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 15,
+  "fields": {
+    "name": "ชุดหูฟัง"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 16,
+  "fields": {
+    "name": "จอภาพ"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 1,
+  "fields": {
+    "name": "Power Supply S3809-045",
+    "brand": 1,
+    "category": 1,
+    "description": "กำลังไฟ 650W, มาตรฐาน 80 Plus Gold, สายถอดได้",
+    "price": "6500.00",
+    "created_at": "2026-07-14T04:00:17.583Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 2,
+  "fields": {
+    "name": "Laptop C6684-081",
+    "brand": 2,
+    "category": 2,
+    "description": "Intel Core i7, RAM 8GB, SSD 2TB NVMe, จอ 16 นิ้ว 2.5K, สีดำ",
+    "price": "50300.00",
+    "created_at": "2026-07-14T04:00:17.586Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "name": "PC Case N3855-014",
+    "brand": 1,
+    "category": 3,
+    "description": "เคส Mini Tower, กระจกนิรภัย, รองรับหม้อน้ำ 360 มม., สีเงิน",
+    "price": "1600.00",
+    "created_at": "2026-07-14T04:00:17.588Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "name": "Laptop W5685-049",
+    "brand": 3,
+    "category": 2,
+    "description": "AMD Ryzen 5, RAM 32GB, SSD 512GB NVMe, จอ 15.6 นิ้ว FHD, สีเทาเข้ม",
+    "price": "65700.00",
+    "created_at": "2026-07-14T04:00:17.591Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 6,
+  "fields": {
+    "name": "Keyboard O1677-041",
+    "brand": 2,
+    "category": 5,
+    "description": "คีย์บอร์ดแมคคานิคอล, สวิตช์น้ำเงิน, ไฟ RGB, รองรับภาษาไทย",
+    "price": "3000.00",
+    "created_at": "2026-07-14T04:00:17.596Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 7,
+  "fields": {
+    "name": "Graphics Card V4944-100",
+    "brand": 3,
+    "category": 6,
+    "description": "หน่วยความจำ 12GB GDDR6X, พัดลม 2 ตัว, รองรับ Ray Tracing",
+    "price": "21200.00",
+    "created_at": "2026-07-14T04:00:17.598Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 8,
+  "fields": {
+    "name": "Graphics Card D3397-004",
+    "brand": 5,
+    "category": 6,
+    "description": "หน่วยความจำ 12GB GDDR6X, พัดลม 2 ตัว, รองรับ Ray Tracing",
+    "price": "22400.00",
+    "created_at": "2026-07-14T04:00:17.601Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 9,
+  "fields": {
+    "name": "UPS L2805-064",
+    "brand": 5,
+    "category": 7,
+    "description": "กำลังไฟ 1500VA, ป้องกันไฟกระชาก, สำรองไฟประมาณ 45 นาที",
+    "price": "6000.00",
+    "created_at": "2026-07-14T04:00:17.602Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 10,
+  "fields": {
+    "name": "Laptop M2295-065",
+    "brand": 6,
+    "category": 2,
+    "description": "Intel Core i5, RAM 16GB, SSD 512GB NVMe, จอ 14 นิ้ว FHD, สีดำ",
+    "price": "60100.00",
+    "created_at": "2026-07-14T04:00:17.604Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 11,
+  "fields": {
+    "name": "Webcam E1339-031",
+    "brand": 1,
+    "category": 8,
+    "description": "ความละเอียด Full HD 1080p, 30fps, ไมโครโฟนคู่และฝาปิดเลนส์",
+    "price": "3100.00",
+    "created_at": "2026-07-14T04:00:17.606Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 12,
+  "fields": {
+    "name": "Power Supply C3394-029",
+    "brand": 1,
+    "category": 1,
+    "description": "กำลังไฟ 1000W, มาตรฐาน 80 Plus Platinum, สายถอดได้",
+    "price": "4000.00",
+    "created_at": "2026-07-14T04:00:17.608Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 13,
+  "fields": {
+    "name": "Motherboard U8272-021",
+    "brand": 7,
+    "category": 4,
+    "description": "ขนาด Micro-ATX, รองรับ DDR5, Wi-Fi 7, ช่อง M.2 จำนวน 4 ช่อง",
+    "price": "13100.00",
+    "created_at": "2026-07-14T04:00:17.610Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 14,
+  "fields": {
+    "name": "SSD G6992-007",
+    "brand": 8,
+    "category": 9,
+    "description": "ความจุ 1TB, อินเทอร์เฟซ SATA III, รับประกัน 5 ปี",
+    "price": "7700.00",
+    "created_at": "2026-07-14T04:00:17.613Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 15,
+  "fields": {
+    "name": "Desktop D7663-082",
+    "brand": 9,
+    "category": 10,
+    "description": "Intel Core i7, RAM 16GB, SSD 2TB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "76200.00",
+    "created_at": "2026-07-14T04:00:17.619Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 16,
+  "fields": {
+    "name": "Graphics Card J9276-036",
+    "brand": 7,
+    "category": 6,
+    "description": "หน่วยความจำ 8GB GDDR6, พัดลม 3 ตัว, รองรับ Ray Tracing",
+    "price": "61200.00",
+    "created_at": "2026-07-14T04:00:17.621Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 17,
+  "fields": {
+    "name": "Motherboard E4041-005",
+    "brand": 6,
+    "category": 4,
+    "description": "ขนาด Mini-ITX, รองรับ DDR5, Wi-Fi 6E, ช่อง M.2 จำนวน 2 ช่อง",
+    "price": "3600.00",
+    "created_at": "2026-07-14T04:00:17.622Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 18,
+  "fields": {
+    "name": "UPS B2175-080",
+    "brand": 1,
+    "category": 7,
+    "description": "กำลังไฟ 2000VA, ป้องกันไฟกระชาก, สำรองไฟประมาณ 30 นาที",
+    "price": "3200.00",
+    "created_at": "2026-07-14T04:00:17.624Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 19,
+  "fields": {
+    "name": "Motherboard G5304-085",
+    "brand": 1,
+    "category": 4,
+    "description": "ขนาด ATX, รองรับ DDR5, Wi-Fi 6, ช่อง M.2 จำนวน 2 ช่อง",
+    "price": "11000.00",
+    "created_at": "2026-07-14T04:00:17.625Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 20,
+  "fields": {
+    "name": "Laptop Q4376-017",
+    "brand": 1,
+    "category": 2,
+    "description": "AMD Ryzen 5, RAM 64GB, SSD 512GB NVMe, จอ 14 นิ้ว FHD, สีดำ",
+    "price": "52800.00",
+    "created_at": "2026-07-14T04:00:17.627Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 21,
+  "fields": {
+    "name": "Mouse P5380-042",
+    "brand": 6,
+    "category": 11,
+    "description": "เมาส์เกมมิ่ง, ความละเอียด 26,000 DPI, ปุ่มตั้งโปรแกรมได้ 5 ปุ่ม",
+    "price": "400.00",
+    "created_at": "2026-07-14T04:00:17.629Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 22,
+  "fields": {
+    "name": "SSD C1551-055",
+    "brand": 8,
+    "category": 9,
+    "description": "ความจุ 4TB, อินเทอร์เฟซ NVMe PCIe 4.0, รับประกัน 5 ปี",
+    "price": "9700.00",
+    "created_at": "2026-07-14T04:00:17.631Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 23,
+  "fields": {
+    "name": "Keyboard Y3670-025",
+    "brand": 6,
+    "category": 5,
+    "description": "คีย์บอร์ดแมคคานิคอล, สวิตช์น้ำเงิน, ไฟ RGB, รองรับภาษาไทย",
+    "price": "4400.00",
+    "created_at": "2026-07-14T04:00:17.632Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 24,
+  "fields": {
+    "name": "PC Case P2244-094",
+    "brand": 1,
+    "category": 3,
+    "description": "เคส Mini Tower, กระจกนิรภัย, รองรับหม้อน้ำ 280 มม., สีดำ",
+    "price": "1300.00",
+    "created_at": "2026-07-14T04:00:17.634Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 25,
+  "fields": {
+    "name": "Power Supply Y5833-077",
+    "brand": 9,
+    "category": 1,
+    "description": "กำลังไฟ 850W, มาตรฐาน 80 Plus Platinum, สายถอดได้",
+    "price": "7300.00",
+    "created_at": "2026-07-14T04:00:17.635Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 26,
+  "fields": {
+    "name": "Webcam A9344-079",
+    "brand": 5,
+    "category": 8,
+    "description": "ความละเอียด 2K QHD, 30fps, ไมโครโฟนคู่และฝาปิดเลนส์",
+    "price": "3700.00",
+    "created_at": "2026-07-14T04:00:17.637Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 27,
+  "fields": {
+    "name": "Processor I7407-035",
+    "brand": 1,
+    "category": 12,
+    "description": "16 คอร์, ความเร็วสูงสุด 5.6GHz, รองรับงานทั่วไปและเกม",
+    "price": "10200.00",
+    "created_at": "2026-07-14T04:00:17.639Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 28,
+  "fields": {
+    "name": "Webcam O3504-015",
+    "brand": 1,
+    "category": 8,
+    "description": "ความละเอียด 2K QHD, 30fps, ไมโครโฟนคู่และฝาปิดเลนส์",
+    "price": "2800.00",
+    "created_at": "2026-07-14T04:00:17.641Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 29,
+  "fields": {
+    "name": "PC Case Z9005-078",
+    "brand": 5,
+    "category": 3,
+    "description": "เคส Mini Tower, กระจกนิรภัย, รองรับหม้อน้ำ 240 มม., สีเทาเข้ม",
+    "price": "5300.00",
+    "created_at": "2026-07-14T04:00:17.642Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 30,
+  "fields": {
+    "name": "Mouse V2999-074",
+    "brand": 2,
+    "category": 11,
+    "description": "เมาส์เพื่อการทำงาน, ความละเอียด 8,000 DPI, ปุ่มตั้งโปรแกรมได้ 5 ปุ่ม",
+    "price": "1000.00",
+    "created_at": "2026-07-14T04:00:17.643Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 31,
+  "fields": {
+    "name": "Memory Kit B1496-054",
+    "brand": 3,
+    "category": 13,
+    "description": "RAM 32GB แบบ DDR5, ความเร็ว 5600MHz, ชุดระบายความร้อนในตัว",
+    "price": "8700.00",
+    "created_at": "2026-07-14T04:00:17.645Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 32,
+  "fields": {
+    "name": "Mouse Z8626-026",
+    "brand": 1,
+    "category": 11,
+    "description": "เมาส์ไร้สาย, ความละเอียด 8,000 DPI, ปุ่มตั้งโปรแกรมได้ 5 ปุ่ม",
+    "price": "4300.00",
+    "created_at": "2026-07-14T04:00:17.646Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 33,
+  "fields": {
+    "name": "Processor U1747-099",
+    "brand": 4,
+    "category": 12,
+    "description": "12 คอร์, ความเร็วสูงสุด 4.4GHz, รองรับงานทั่วไปและเกม",
+    "price": "6400.00",
+    "created_at": "2026-07-14T04:00:17.647Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 34,
+  "fields": {
+    "name": "Webcam K9760-063",
+    "brand": 8,
+    "category": 8,
+    "description": "ความละเอียด Full HD 1080p, 30fps, ไมโครโฟนคู่และฝาปิดเลนส์",
+    "price": "6200.00",
+    "created_at": "2026-07-14T04:00:17.649Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 35,
+  "fields": {
+    "name": "Laptop G9831-033",
+    "brand": 4,
+    "category": 2,
+    "description": "Intel Core i5, RAM 16GB, SSD 512GB NVMe, จอ 15.6 นิ้ว FHD, สีเงิน",
+    "price": "23900.00",
+    "created_at": "2026-07-14T04:00:17.650Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 36,
+  "fields": {
+    "name": "SSD S6642-071",
+    "brand": 4,
+    "category": 9,
+    "description": "ความจุ 4TB, อินเทอร์เฟซ NVMe PCIe 5.0, รับประกัน 5 ปี",
+    "price": "4300.00",
+    "created_at": "2026-07-14T04:00:17.652Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 37,
+  "fields": {
+    "name": "Keyboard K8726-089",
+    "brand": 8,
+    "category": 5,
+    "description": "คีย์บอร์ดแมคคานิคอล, สวิตช์แดง, ไฟ RGB, รองรับภาษาไทย",
+    "price": "5100.00",
+    "created_at": "2026-07-14T04:00:17.653Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 38,
+  "fields": {
+    "name": "Desktop H6747-034",
+    "brand": 1,
+    "category": 10,
+    "description": "AMD Ryzen 7, RAM 64GB, SSD 512GB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "21500.00",
+    "created_at": "2026-07-14T04:00:17.655Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 39,
+  "fields": {
+    "name": "Graphics Card Z2788-052",
+    "brand": 1,
+    "category": 6,
+    "description": "หน่วยความจำ 12GB GDDR6X, พัดลม 3 ตัว, รองรับ Ray Tracing",
+    "price": "8000.00",
+    "created_at": "2026-07-14T04:00:17.657Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 40,
+  "fields": {
+    "name": "Motherboard Q9126-069",
+    "brand": 9,
+    "category": 4,
+    "description": "ขนาด ATX, รองรับ DDR5, Wi-Fi 6E, ช่อง M.2 จำนวน 3 ช่อง",
+    "price": "16000.00",
+    "created_at": "2026-07-14T04:00:17.661Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 41,
+  "fields": {
+    "name": "Router B3722-028",
+    "brand": 8,
+    "category": 14,
+    "description": "เราเตอร์ Wi-Fi 7, ความเร็วรวม 5.4Gbps, พอร์ต Gigabit LAN 5 ช่อง",
+    "price": "6700.00",
+    "created_at": "2026-07-14T04:00:17.663Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 42,
+  "fields": {
+    "name": "Memory Kit F8049-006",
+    "brand": 4,
+    "category": 13,
+    "description": "RAM 64GB แบบ DDR4, ความเร็ว 6000MHz, ชุดระบายความร้อนในตัว",
+    "price": "3300.00",
+    "created_at": "2026-07-14T04:00:17.664Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 43,
+  "fields": {
+    "name": "Router N7180-092",
+    "brand": 2,
+    "category": 14,
+    "description": "เราเตอร์ Wi-Fi 6E, ความเร็วรวม 5.4Gbps, พอร์ต Gigabit LAN 4 ช่อง",
+    "price": "11800.00",
+    "created_at": "2026-07-14T04:00:17.666Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 44,
+  "fields": {
+    "name": "Power Supply M4225-013",
+    "brand": 4,
+    "category": 1,
+    "description": "กำลังไฟ 650W, มาตรฐาน 80 Plus Gold, สายถอดได้",
+    "price": "6300.00",
+    "created_at": "2026-07-14T04:00:17.667Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 45,
+  "fields": {
+    "name": "Processor S9559-019",
+    "brand": 2,
+    "category": 12,
+    "description": "16 คอร์, ความเร็วสูงสุด 5.6GHz, รองรับงานทั่วไปและเกม",
+    "price": "9900.00",
+    "created_at": "2026-07-14T04:00:17.671Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 46,
+  "fields": {
+    "name": "Processor C5951-003",
+    "brand": 3,
+    "category": 12,
+    "description": "8 คอร์, ความเร็วสูงสุด 4.8GHz, รองรับงานทั่วไปและเกม",
+    "price": "18900.00",
+    "created_at": "2026-07-14T04:00:17.672Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 47,
+  "fields": {
+    "name": "Desktop X2958-050",
+    "brand": 7,
+    "category": 10,
+    "description": "Intel Core i5, RAM 8GB, SSD 2TB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "55100.00",
+    "created_at": "2026-07-14T04:00:17.674Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 48,
+  "fields": {
+    "name": "Graphics Card P9246-068",
+    "brand": 7,
+    "category": 6,
+    "description": "หน่วยความจำ 12GB GDDR6X, พัดลม 3 ตัว, รองรับ Ray Tracing",
+    "price": "55400.00",
+    "created_at": "2026-07-14T04:00:17.675Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 49,
+  "fields": {
+    "name": "Desktop N8176-066",
+    "brand": 1,
+    "category": 10,
+    "description": "Intel Core i7, RAM 32GB, SSD 512GB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "46100.00",
+    "created_at": "2026-07-14T04:00:17.677Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 50,
+  "fields": {
+    "name": "SSD W3728-023",
+    "brand": 7,
+    "category": 9,
+    "description": "ความจุ 500GB, อินเทอร์เฟซ SATA III, รับประกัน 5 ปี",
+    "price": "6000.00",
+    "created_at": "2026-07-14T04:00:17.681Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 51,
+  "fields": {
+    "name": "PC Case D4159-030",
+    "brand": 6,
+    "category": 3,
+    "description": "เคส Full Tower, กระจกนิรภัย, รองรับหม้อน้ำ 240 มม., สีขาว",
+    "price": "4300.00",
+    "created_at": "2026-07-14T04:00:17.682Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 52,
+  "fields": {
+    "name": "UPS V4826-048",
+    "brand": 10,
+    "category": 7,
+    "description": "กำลังไฟ 2000VA, ป้องกันไฟกระชาก, สำรองไฟประมาณ 10 นาที",
+    "price": "11600.00",
+    "created_at": "2026-07-14T04:00:17.684Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 53,
+  "fields": {
+    "name": "Headset G8737-059",
+    "brand": 4,
+    "category": 15,
+    "description": "ระบบเสียง 7.1 Surround, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ 3.5 มม.",
+    "price": "3900.00",
+    "created_at": "2026-07-14T04:00:17.686Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 54,
+  "fields": {
+    "name": "Monitor H2240-008",
+    "brand": 9,
+    "category": 16,
+    "description": "จอ 24 นิ้ว, ความละเอียด 2K QHD, รีเฟรชเรต 165Hz",
+    "price": "11500.00",
+    "created_at": "2026-07-14T04:00:17.688Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 55,
+  "fields": {
+    "name": "Headset M5325-091",
+    "brand": 1,
+    "category": 15,
+    "description": "ระบบเสียง 7.1 Surround, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ 3.5 มม.",
+    "price": "5800.00",
+    "created_at": "2026-07-14T04:00:17.689Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 56,
+  "fields": {
+    "name": "Power Supply I2408-061",
+    "brand": 9,
+    "category": 1,
+    "description": "กำลังไฟ 650W, มาตรฐาน 80 Plus Platinum, สายถอดได้",
+    "price": "3500.00",
+    "created_at": "2026-07-14T04:00:17.691Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 57,
+  "fields": {
+    "name": "Graphics Card F9551-084",
+    "brand": 1,
+    "category": 6,
+    "description": "หน่วยความจำ 16GB GDDR6, พัดลม 2 ตัว, รองรับ Ray Tracing",
+    "price": "27300.00",
+    "created_at": "2026-07-14T04:00:17.694Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 58,
+  "fields": {
+    "name": "Monitor T5854-072",
+    "brand": 4,
+    "category": 16,
+    "description": "จอ 32 นิ้ว, ความละเอียด 4K UHD, รีเฟรชเรต 144Hz",
+    "price": "17800.00",
+    "created_at": "2026-07-14T04:00:17.695Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 59,
+  "fields": {
+    "name": "Router R3775-044",
+    "brand": 3,
+    "category": 14,
+    "description": "เราเตอร์ Wi-Fi 7, ความเร็วรวม 5.4Gbps, พอร์ต Gigabit LAN 5 ช่อง",
+    "price": "9700.00",
+    "created_at": "2026-07-14T04:00:17.696Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 60,
+  "fields": {
+    "name": "Monitor D2421-056",
+    "brand": 7,
+    "category": 16,
+    "description": "จอ 32 นิ้ว, ความละเอียด 4K UHD, รีเฟรชเรต 240Hz",
+    "price": "22400.00",
+    "created_at": "2026-07-14T04:00:17.697Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 61,
+  "fields": {
+    "name": "Monitor J1393-088",
+    "brand": 8,
+    "category": 16,
+    "description": "จอ 27 นิ้ว, ความละเอียด 2K QHD, รีเฟรชเรต 75Hz",
+    "price": "7300.00",
+    "created_at": "2026-07-14T04:00:17.699Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 62,
+  "fields": {
+    "name": "Desktop B1714-002",
+    "brand": 5,
+    "category": 10,
+    "description": "Intel Core i7, RAM 16GB, SSD 2TB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "49000.00",
+    "created_at": "2026-07-14T04:00:17.700Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 63,
+  "fields": {
+    "name": "Memory Kit R8931-070",
+    "brand": 8,
+    "category": 13,
+    "description": "RAM 32GB แบบ DDR5, ความเร็ว 5600MHz, ชุดระบายความร้อนในตัว",
+    "price": "5500.00",
+    "created_at": "2026-07-14T04:00:17.701Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 64,
+  "fields": {
+    "name": "Keyboard U7437-073",
+    "brand": 2,
+    "category": 5,
+    "description": "คีย์บอร์ดแมคคานิคอล, สวิตช์น้ำเงิน, ไฟ RGB, รองรับภาษาไทย",
+    "price": "2600.00",
+    "created_at": "2026-07-14T04:00:17.702Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 65,
+  "fields": {
+    "name": "Monitor X6168-024",
+    "brand": 2,
+    "category": 16,
+    "description": "จอ 27 นิ้ว, ความละเอียด Full HD, รีเฟรชเรต 144Hz",
+    "price": "25800.00",
+    "created_at": "2026-07-14T04:00:17.704Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 66,
+  "fields": {
+    "name": "UPS F9435-032",
+    "brand": 10,
+    "category": 7,
+    "description": "กำลังไฟ 1000VA, ป้องกันไฟกระชาก, สำรองไฟประมาณ 20 นาที",
+    "price": "4700.00",
+    "created_at": "2026-07-14T04:00:17.705Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 67,
+  "fields": {
+    "name": "Graphics Card T3027-020",
+    "brand": 7,
+    "category": 6,
+    "description": "หน่วยความจำ 8GB GDDR6, พัดลม 3 ตัว, รองรับ Ray Tracing",
+    "price": "57800.00",
+    "created_at": "2026-07-14T04:00:17.706Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 68,
+  "fields": {
+    "name": "Headset Q2291-043",
+    "brand": 10,
+    "category": 15,
+    "description": "ระบบเสียง Spatial Audio, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ USB",
+    "price": "2700.00",
+    "created_at": "2026-07-14T04:00:17.707Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 69,
+  "fields": {
+    "name": "Laptop S2279-097",
+    "brand": 6,
+    "category": 2,
+    "description": "Intel Core i7, RAM 32GB, SSD 512GB NVMe, จอ 15.6 นิ้ว FHD, สีเงิน",
+    "price": "40000.00",
+    "created_at": "2026-07-14T04:00:17.709Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 70,
+  "fields": {
+    "name": "Processor Y7821-051",
+    "brand": 8,
+    "category": 12,
+    "description": "6 คอร์, ความเร็วสูงสุด 5.2GHz, รองรับงานทั่วไปและเกม",
+    "price": "15700.00",
+    "created_at": "2026-07-14T04:00:17.710Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 71,
+  "fields": {
+    "name": "Headset W9602-075",
+    "brand": 3,
+    "category": 15,
+    "description": "ระบบเสียง Spatial Audio, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ 3.5 มม.",
+    "price": "5300.00",
+    "created_at": "2026-07-14T04:00:17.711Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 72,
+  "fields": {
+    "name": "PC Case J3084-062",
+    "brand": 7,
+    "category": 3,
+    "description": "เคส Full Tower, กระจกนิรภัย, รองรับหม้อน้ำ 280 มม., สีเงิน",
+    "price": "6600.00",
+    "created_at": "2026-07-14T04:00:17.713Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 73,
+  "fields": {
+    "name": "Keyboard E1578-057",
+    "brand": 9,
+    "category": 5,
+    "description": "คีย์บอร์ดแมคคานิคอล, สวิตช์แดง, ไฟ RGB, รองรับภาษาไทย",
+    "price": "3600.00",
+    "created_at": "2026-07-14T04:00:17.714Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 74,
+  "fields": {
+    "name": "Power Supply O5114-093",
+    "brand": 10,
+    "category": 1,
+    "description": "กำลังไฟ 1000W, มาตรฐาน 80 Plus Platinum, สายถอดได้",
+    "price": "7800.00",
+    "created_at": "2026-07-14T04:00:17.716Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 75,
+  "fields": {
+    "name": "SSD I6346-087",
+    "brand": 4,
+    "category": 9,
+    "description": "ความจุ 500GB, อินเทอร์เฟซ NVMe PCIe 5.0, รับประกัน 5 ปี",
+    "price": "10000.00",
+    "created_at": "2026-07-14T04:00:17.717Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 76,
+  "fields": {
+    "name": "Processor E5580-083",
+    "brand": 6,
+    "category": 12,
+    "description": "6 คอร์, ความเร็วสูงสุด 4.8GHz, รองรับงานทั่วไปและเกม",
+    "price": "24000.00",
+    "created_at": "2026-07-14T04:00:17.718Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 77,
+  "fields": {
+    "name": "Mouse L9644-090",
+    "brand": 10,
+    "category": 11,
+    "description": "เมาส์เกมมิ่ง, ความละเอียด 26,000 DPI, ปุ่มตั้งโปรแกรมได้ 9 ปุ่ม",
+    "price": "5400.00",
+    "created_at": "2026-07-14T04:00:17.719Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 78,
+  "fields": {
+    "name": "Webcam U8407-047",
+    "brand": 8,
+    "category": 8,
+    "description": "ความละเอียด Full HD 1080p, 60fps, ไมโครโฟนคู่และฝาปิดเลนส์",
+    "price": "3000.00",
+    "created_at": "2026-07-14T04:00:17.720Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 79,
+  "fields": {
+    "name": "Headset K5259-011",
+    "brand": 4,
+    "category": 15,
+    "description": "ระบบเสียง Stereo, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ 3.5 มม.",
+    "price": "5100.00",
+    "created_at": "2026-07-14T04:00:17.721Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 80,
+  "fields": {
+    "name": "Webcam Q9845-095",
+    "brand": 7,
+    "category": 8,
+    "description": "ความละเอียด 4K UHD, 60fps, ไมโครโฟนคู่และฝาปิดเลนส์",
+    "price": "1600.00",
+    "created_at": "2026-07-14T04:00:17.723Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 81,
+  "fields": {
+    "name": "Mouse F8218-058",
+    "brand": 6,
+    "category": 11,
+    "description": "เมาส์ไร้สาย, ความละเอียด 8,000 DPI, ปุ่มตั้งโปรแกรมได้ 9 ปุ่ม",
+    "price": "5900.00",
+    "created_at": "2026-07-14T04:00:17.724Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 82,
+  "fields": {
+    "name": "Headset A3349-027",
+    "brand": 6,
+    "category": 15,
+    "description": "ระบบเสียง Stereo, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ 3.5 มม.",
+    "price": "2500.00",
+    "created_at": "2026-07-14T04:00:17.726Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 83,
+  "fields": {
+    "name": "Memory Kit H1130-086",
+    "brand": 2,
+    "category": 13,
+    "description": "RAM 32GB แบบ DDR5, ความเร็ว 6400MHz, ชุดระบายความร้อนในตัว",
+    "price": "12000.00",
+    "created_at": "2026-07-14T04:00:17.727Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 84,
+  "fields": {
+    "name": "Desktop R3612-018",
+    "brand": 1,
+    "category": 10,
+    "description": "AMD Ryzen 7, RAM 64GB, SSD 512GB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "16500.00",
+    "created_at": "2026-07-14T04:00:17.728Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 85,
+  "fields": {
+    "name": "UPS P8423-016",
+    "brand": 9,
+    "category": 7,
+    "description": "กำลังไฟ 1000VA, ป้องกันไฟกระชาก, สำรองไฟประมาณ 20 นาที",
+    "price": "8500.00",
+    "created_at": "2026-07-14T04:00:17.730Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 86,
+  "fields": {
+    "name": "Router H2200-060",
+    "brand": 9,
+    "category": 14,
+    "description": "เราเตอร์ Wi-Fi 6, ความเร็วรวม 9.2Gbps, พอร์ต Gigabit LAN 3 ช่อง",
+    "price": "10900.00",
+    "created_at": "2026-07-14T04:00:17.731Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 87,
+  "fields": {
+    "name": "Motherboard K4778-037",
+    "brand": 8,
+    "category": 4,
+    "description": "ขนาด Mini-ITX, รองรับ DDR5, Wi-Fi 6E, ช่อง M.2 จำนวน 3 ช่อง",
+    "price": "15800.00",
+    "created_at": "2026-07-14T04:00:17.732Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 88,
+  "fields": {
+    "name": "UPS R3197-096",
+    "brand": 8,
+    "category": 7,
+    "description": "กำลังไฟ 1500VA, ป้องกันไฟกระชาก, สำรองไฟประมาณ 45 นาที",
+    "price": "9800.00",
+    "created_at": "2026-07-14T04:00:17.734Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 89,
+  "fields": {
+    "name": "Router L1129-012",
+    "brand": 8,
+    "category": 14,
+    "description": "เราเตอร์ Wi-Fi 6E, ความเร็วรวม 1.8Gbps, พอร์ต Gigabit LAN 4 ช่อง",
+    "price": "14300.00",
+    "created_at": "2026-07-14T04:00:17.736Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 90,
+  "fields": {
+    "name": "SSD M4417-039",
+    "brand": 2,
+    "category": 9,
+    "description": "ความจุ 500GB, อินเทอร์เฟซ NVMe PCIe 5.0, รับประกัน 5 ปี",
+    "price": "11500.00",
+    "created_at": "2026-07-14T04:00:17.737Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 91,
+  "fields": {
+    "name": "Keyboard I7294-009",
+    "brand": 1,
+    "category": 5,
+    "description": "คีย์บอร์ดไร้สาย, สวิตช์น้ำเงิน, ไฟ RGB, รองรับภาษาไทย",
+    "price": "6900.00",
+    "created_at": "2026-07-14T04:00:17.738Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 92,
+  "fields": {
+    "name": "Processor O4097-067",
+    "brand": 10,
+    "category": 12,
+    "description": "8 คอร์, ความเร็วสูงสุด 4.4GHz, รองรับงานทั่วไปและเกม",
+    "price": "18500.00",
+    "created_at": "2026-07-14T04:00:17.739Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 93,
+  "fields": {
+    "name": "Memory Kit V5823-022",
+    "brand": 4,
+    "category": 13,
+    "description": "RAM 16GB แบบ DDR5, ความเร็ว 5600MHz, ชุดระบายความร้อนในตัว",
+    "price": "6700.00",
+    "created_at": "2026-07-14T04:00:17.740Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 94,
+  "fields": {
+    "name": "Desktop T4238-098",
+    "brand": 7,
+    "category": 10,
+    "description": "AMD Ryzen 5, RAM 16GB, SSD 2TB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "53800.00",
+    "created_at": "2026-07-14T04:00:17.742Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 95,
+  "fields": {
+    "name": "PC Case T7995-046",
+    "brand": 3,
+    "category": 3,
+    "description": "เคส Mid Tower, กระจกนิรภัย, รองรับหม้อน้ำ 360 มม., สีเงิน",
+    "price": "1700.00",
+    "created_at": "2026-07-14T04:00:17.743Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 96,
+  "fields": {
+    "name": "Laptop A3909-001",
+    "brand": 5,
+    "category": 2,
+    "description": "Intel Core i7, RAM 32GB, SSD 1TB NVMe, จอ 15.6 นิ้ว FHD, สีเทาเข้ม",
+    "price": "55500.00",
+    "created_at": "2026-07-14T04:00:17.745Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 97,
+  "fields": {
+    "name": "Monitor N6860-040",
+    "brand": 7,
+    "category": 16,
+    "description": "จอ 27 นิ้ว, ความละเอียด 2K QHD, รีเฟรชเรต 165Hz",
+    "price": "16100.00",
+    "created_at": "2026-07-14T04:00:17.746Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 98,
+  "fields": {
+    "name": "Mouse J8397-010",
+    "brand": 9,
+    "category": 11,
+    "description": "เมาส์ไร้สาย, ความละเอียด 8,000 DPI, ปุ่มตั้งโปรแกรมได้ 9 ปุ่ม",
+    "price": "5900.00",
+    "created_at": "2026-07-14T04:00:17.747Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 99,
+  "fields": {
+    "name": "Memory Kit L6302-038",
+    "brand": 2,
+    "category": 13,
+    "description": "RAM 8GB แบบ DDR4, ความเร็ว 3200MHz, ชุดระบายความร้อนในตัว",
+    "price": "11200.00",
+    "created_at": "2026-07-14T04:00:17.748Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 100,
+  "fields": {
+    "name": "Router X3500-076",
+    "brand": 9,
+    "category": 14,
+    "description": "เราเตอร์ Wi-Fi 6E, ความเร็วรวม 3.0Gbps, พอร์ต Gigabit LAN 3 ช่อง",
+    "price": "1900.00",
+    "created_at": "2026-07-14T04:00:17.750Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 102,
+  "fields": {
+    "name": "Mouse DEMO-001",
+    "brand": 1,
+    "category": 11,
+    "description": "",
+    "price": "590.00",
+    "created_at": "2026-08-10T09:30:27.310Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 103,
+  "fields": {
+    "name": "Motherboard A4180-053",
+    "brand": 4,
+    "category": 4,
+    "description": "ขนาด Micro-ATX, รองรับ DDR5, Wi-Fi 7, ช่อง M.2 จำนวน 4 ช่อง",
+    "price": "13700.00",
+    "created_at": "2026-08-10T12:04:58.032Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 104,
+  "fields": {
+    "name": "Router O9324-101",
+    "brand": 2,
+    "category": 14,
+    "description": "เราเตอร์ Wi-Fi 6, ความเร็วรวม 9.2Gbps, พอร์ต Gigabit LAN 5 ช่อง",
+    "price": "8800.00",
+    "created_at": "2026-08-10T12:04:58.362Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 105,
+  "fields": {
+    "name": "Headset D5940-102",
+    "brand": 7,
+    "category": 15,
+    "description": "ระบบเสียง Stereo, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ USB",
+    "price": "4500.00",
+    "created_at": "2026-08-10T12:04:58.365Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 106,
+  "fields": {
+    "name": "Keyboard T3941-103",
+    "brand": 10,
+    "category": 5,
+    "description": "คีย์บอร์ดไร้สาย, สวิตช์น้ำตาล, ไฟ RGB, รองรับภาษาไทย",
+    "price": "2600.00",
+    "created_at": "2026-08-10T12:04:58.368Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 107,
+  "fields": {
+    "name": "Mouse S9174-104",
+    "brand": 3,
+    "category": 11,
+    "description": "เมาส์ไร้สาย, ความละเอียด 26,000 DPI, ปุ่มตั้งโปรแกรมได้ 7 ปุ่ม",
+    "price": "1500.00",
+    "created_at": "2026-08-10T12:04:58.372Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 108,
+  "fields": {
+    "name": "Router J2778-105",
+    "brand": 10,
+    "category": 14,
+    "description": "เราเตอร์ Wi-Fi 6E, ความเร็วรวม 3.0Gbps, พอร์ต Gigabit LAN 4 ช่อง",
+    "price": "4400.00",
+    "created_at": "2026-08-10T12:04:58.375Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 109,
+  "fields": {
+    "name": "SSD L4952-106",
+    "brand": 2,
+    "category": 9,
+    "description": "ความจุ 8TB, อินเทอร์เฟซ NVMe PCIe 5.0, รับประกัน 5 ปี",
+    "price": "11400.00",
+    "created_at": "2026-08-10T12:04:58.378Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 110,
+  "fields": {
+    "name": "Monitor G6185-107",
+    "brand": 7,
+    "category": 16,
+    "description": "จอ 24 นิ้ว, ความละเอียด 2K QHD, รีเฟรชเรต 240Hz",
+    "price": "16600.00",
+    "created_at": "2026-08-10T12:04:58.381Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 111,
+  "fields": {
+    "name": "Memory Kit Z9288-108",
+    "brand": 3,
+    "category": 13,
+    "description": "RAM 8GB แบบ DDR4, ความเร็ว 3600MHz, ชุดระบายความร้อนในตัว",
+    "price": "3400.00",
+    "created_at": "2026-08-10T12:04:58.385Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 112,
+  "fields": {
+    "name": "Headset D1267-109",
+    "brand": 2,
+    "category": 15,
+    "description": "ระบบเสียง Spatial Audio, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ 3.5 มม.",
+    "price": "5300.00",
+    "created_at": "2026-08-10T12:04:58.389Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 113,
+  "fields": {
+    "name": "Motherboard B9326-110",
+    "brand": 6,
+    "category": 4,
+    "description": "ขนาด Mini-ITX, รองรับ DDR4, Wi-Fi 6E, ช่อง M.2 จำนวน 3 ช่อง",
+    "price": "10000.00",
+    "created_at": "2026-08-10T12:04:58.393Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 114,
+  "fields": {
+    "name": "Router V3294-111",
+    "brand": 1,
+    "category": 14,
+    "description": "เราเตอร์ Wi-Fi 6E, ความเร็วรวม 9.2Gbps, พอร์ต Gigabit LAN 3 ช่อง",
+    "price": "9500.00",
+    "created_at": "2026-08-10T12:04:58.397Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 115,
+  "fields": {
+    "name": "Monitor U9559-112",
+    "brand": 7,
+    "category": 16,
+    "description": "จอ 27 นิ้ว, ความละเอียด 2K QHD, รีเฟรชเรต 240Hz",
+    "price": "18200.00",
+    "created_at": "2026-08-10T12:04:58.400Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 116,
+  "fields": {
+    "name": "Memory Kit X5005-113",
+    "brand": 1,
+    "category": 13,
+    "description": "RAM 16GB แบบ DDR4, ความเร็ว 3200MHz, ชุดระบายความร้อนในตัว",
+    "price": "8300.00",
+    "created_at": "2026-08-10T12:04:58.404Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 117,
+  "fields": {
+    "name": "Power Supply F7029-114",
+    "brand": 9,
+    "category": 1,
+    "description": "กำลังไฟ 1000W, มาตรฐาน 80 Plus Platinum, สายถอดได้",
+    "price": "7700.00",
+    "created_at": "2026-08-10T12:04:58.408Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 118,
+  "fields": {
+    "name": "UPS K4527-115",
+    "brand": 2,
+    "category": 7,
+    "description": "กำลังไฟ 800VA, ป้องกันไฟกระชาก, สำรองไฟประมาณ 30 นาที",
+    "price": "9500.00",
+    "created_at": "2026-08-10T12:04:58.411Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 119,
+  "fields": {
+    "name": "Keyboard P6566-116",
+    "brand": 6,
+    "category": 5,
+    "description": "คีย์บอร์ดแมคคานิคอล, สวิตช์น้ำเงิน, ไฟ RGB, รองรับภาษาไทย",
+    "price": "3500.00",
+    "created_at": "2026-08-10T12:04:58.414Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 120,
+  "fields": {
+    "name": "Processor K5502-117",
+    "brand": 6,
+    "category": 12,
+    "description": "20 คอร์, ความเร็วสูงสุด 6.0GHz, รองรับงานทั่วไปและเกม",
+    "price": "13900.00",
+    "created_at": "2026-08-10T12:04:58.418Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 121,
+  "fields": {
+    "name": "Laptop B1527-118",
+    "brand": 2,
+    "category": 2,
+    "description": "Intel Core i7, RAM 32GB, SSD 2TB NVMe, จอ 13.3 นิ้ว FHD, สีเทาเข้ม",
+    "price": "58900.00",
+    "created_at": "2026-08-10T12:04:58.421Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 122,
+  "fields": {
+    "name": "Webcam H3821-119",
+    "brand": 2,
+    "category": 8,
+    "description": "ความละเอียด Full HD 1080p, 60fps, ไมโครโฟนคู่และฝาปิดเลนส์",
+    "price": "5400.00",
+    "created_at": "2026-08-10T12:04:58.425Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 123,
+  "fields": {
+    "name": "Power Supply Y2315-120",
+    "brand": 2,
+    "category": 1,
+    "description": "กำลังไฟ 550W, มาตรฐาน 80 Plus Gold, สายกึ่งถอดได้",
+    "price": "6900.00",
+    "created_at": "2026-08-10T12:04:58.429Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 124,
+  "fields": {
+    "name": "PC Case D7588-121",
+    "brand": 8,
+    "category": 3,
+    "description": "เคส Mid Tower, กระจกนิรภัย, รองรับหม้อน้ำ 280 มม., สีขาว",
+    "price": "2700.00",
+    "created_at": "2026-08-10T12:04:58.432Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 125,
+  "fields": {
+    "name": "Graphics Card J5201-122",
+    "brand": 9,
+    "category": 6,
+    "description": "หน่วยความจำ 12GB GDDR6X, พัดลม 3 ตัว, รองรับ Ray Tracing",
+    "price": "10000.00",
+    "created_at": "2026-08-10T12:04:58.436Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 126,
+  "fields": {
+    "name": "Webcam N8445-123",
+    "brand": 6,
+    "category": 8,
+    "description": "ความละเอียด 4K UHD, 30fps, ไมโครโฟนคู่และฝาปิดเลนส์",
+    "price": "2500.00",
+    "created_at": "2026-08-10T12:04:58.439Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 127,
+  "fields": {
+    "name": "PC Case V9733-124",
+    "brand": 7,
+    "category": 3,
+    "description": "เคส Full Tower, กระจกนิรภัย, รองรับหม้อน้ำ 280 มม., สีดำ",
+    "price": "5000.00",
+    "created_at": "2026-08-10T12:04:58.443Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 128,
+  "fields": {
+    "name": "UPS R9167-125",
+    "brand": 5,
+    "category": 7,
+    "description": "กำลังไฟ 3000VA, ป้องกันไฟกระชาก, สำรองไฟประมาณ 45 นาที",
+    "price": "4300.00",
+    "created_at": "2026-08-10T12:04:58.446Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 129,
+  "fields": {
+    "name": "Processor T4596-126",
+    "brand": 8,
+    "category": 12,
+    "description": "6 คอร์, ความเร็วสูงสุด 5.6GHz, รองรับงานทั่วไปและเกม",
+    "price": "20000.00",
+    "created_at": "2026-08-10T12:04:58.449Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 130,
+  "fields": {
+    "name": "Processor X8095-127",
+    "brand": 8,
+    "category": 12,
+    "description": "8 คอร์, ความเร็วสูงสุด 4.4GHz, รองรับงานทั่วไปและเกม",
+    "price": "18900.00",
+    "created_at": "2026-08-10T12:04:58.452Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 131,
+  "fields": {
+    "name": "Monitor O3168-128",
+    "brand": 6,
+    "category": 16,
+    "description": "จอ 34 นิ้ว, ความละเอียด 2K QHD, รีเฟรชเรต 100Hz",
+    "price": "9700.00",
+    "created_at": "2026-08-10T12:04:58.456Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 132,
+  "fields": {
+    "name": "Graphics Card G7148-129",
+    "brand": 10,
+    "category": 6,
+    "description": "หน่วยความจำ 24GB GDDR7, พัดลม 3 ตัว, รองรับ Ray Tracing",
+    "price": "54000.00",
+    "created_at": "2026-08-10T12:04:58.459Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 133,
+  "fields": {
+    "name": "SSD N8099-130",
+    "brand": 8,
+    "category": 9,
+    "description": "ความจุ 4TB, อินเทอร์เฟซ NVMe PCIe 5.0, รับประกัน 5 ปี",
+    "price": "9400.00",
+    "created_at": "2026-08-10T12:04:58.464Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 134,
+  "fields": {
+    "name": "Motherboard A9715-131",
+    "brand": 2,
+    "category": 4,
+    "description": "ขนาด Mini-ITX, รองรับ DDR4, Wi-Fi 7, ช่อง M.2 จำนวน 3 ช่อง",
+    "price": "6100.00",
+    "created_at": "2026-08-10T12:04:58.467Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 135,
+  "fields": {
+    "name": "Webcam D8216-132",
+    "brand": 2,
+    "category": 8,
+    "description": "ความละเอียด 2K QHD, 60fps, ไมโครโฟนคู่และฝาปิดเลนส์",
+    "price": "5200.00",
+    "created_at": "2026-08-10T12:04:58.471Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 136,
+  "fields": {
+    "name": "Power Supply O4574-133",
+    "brand": 7,
+    "category": 1,
+    "description": "กำลังไฟ 550W, มาตรฐาน 80 Plus Bronze, สายกึ่งถอดได้",
+    "price": "7300.00",
+    "created_at": "2026-08-10T12:04:58.474Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 137,
+  "fields": {
+    "name": "Motherboard I8185-134",
+    "brand": 8,
+    "category": 4,
+    "description": "ขนาด E-ATX, รองรับ DDR5, Wi-Fi 7, ช่อง M.2 จำนวน 5 ช่อง",
+    "price": "11200.00",
+    "created_at": "2026-08-10T12:04:58.477Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 138,
+  "fields": {
+    "name": "Processor Y8991-135",
+    "brand": 10,
+    "category": 12,
+    "description": "16 คอร์, ความเร็วสูงสุด 5.6GHz, รองรับงานทั่วไปและเกม",
+    "price": "7800.00",
+    "created_at": "2026-08-10T12:04:58.480Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 139,
+  "fields": {
+    "name": "UPS K7240-136",
+    "brand": 6,
+    "category": 7,
+    "description": "กำลังไฟ 1500VA, ป้องกันไฟกระชาก, สำรองไฟประมาณ 45 นาที",
+    "price": "11200.00",
+    "created_at": "2026-08-10T12:04:58.483Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 140,
+  "fields": {
+    "name": "Motherboard X1840-137",
+    "brand": 2,
+    "category": 4,
+    "description": "ขนาด E-ATX, รองรับ DDR4, Wi-Fi 6E, ช่อง M.2 จำนวน 2 ช่อง",
+    "price": "15100.00",
+    "created_at": "2026-08-10T12:04:58.487Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 141,
+  "fields": {
+    "name": "PC Case Z5038-138",
+    "brand": 8,
+    "category": 3,
+    "description": "เคส Mid Tower, กระจกนิรภัย, รองรับหม้อน้ำ 280 มม., สีขาว",
+    "price": "3300.00",
+    "created_at": "2026-08-10T12:04:58.490Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 142,
+  "fields": {
+    "name": "Mouse G2332-139",
+    "brand": 8,
+    "category": 11,
+    "description": "เมาส์เกมมิ่ง, ความละเอียด 26,000 DPI, ปุ่มตั้งโปรแกรมได้ 7 ปุ่ม",
+    "price": "1200.00",
+    "created_at": "2026-08-10T12:04:58.494Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 143,
+  "fields": {
+    "name": "UPS I8134-140",
+    "brand": 5,
+    "category": 7,
+    "description": "กำลังไฟ 3000VA, ป้องกันไฟกระชาก, สำรองไฟประมาณ 10 นาที",
+    "price": "8900.00",
+    "created_at": "2026-08-10T12:04:58.497Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 144,
+  "fields": {
+    "name": "PC Case E3773-141",
+    "brand": 5,
+    "category": 3,
+    "description": "เคส Full Tower, กระจกนิรภัย, รองรับหม้อน้ำ 360 มม., สีเงิน",
+    "price": "6200.00",
+    "created_at": "2026-08-10T12:04:58.500Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 145,
+  "fields": {
+    "name": "PC Case V7076-142",
+    "brand": 4,
+    "category": 3,
+    "description": "เคส Full Tower, กระจกนิรภัย, รองรับหม้อน้ำ 280 มม., สีเงิน",
+    "price": "1700.00",
+    "created_at": "2026-08-10T12:04:58.504Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 146,
+  "fields": {
+    "name": "Keyboard Z2165-143",
+    "brand": 4,
+    "category": 5,
+    "description": "คีย์บอร์ดเมมเบรน, สวิตช์น้ำตาล, ไฟ RGB, รองรับภาษาไทย",
+    "price": "2900.00",
+    "created_at": "2026-08-10T12:04:58.507Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 147,
+  "fields": {
+    "name": "SSD Z1711-144",
+    "brand": 10,
+    "category": 9,
+    "description": "ความจุ 2TB, อินเทอร์เฟซ NVMe PCIe 5.0, รับประกัน 3 ปี",
+    "price": "9900.00",
+    "created_at": "2026-08-10T12:04:58.510Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 148,
+  "fields": {
+    "name": "Motherboard Y6757-145",
+    "brand": 5,
+    "category": 4,
+    "description": "ขนาด Mini-ITX, รองรับ DDR5, Wi-Fi 6, ช่อง M.2 จำนวน 5 ช่อง",
+    "price": "3900.00",
+    "created_at": "2026-08-10T12:04:58.514Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 149,
+  "fields": {
+    "name": "SSD G7835-146",
+    "brand": 10,
+    "category": 9,
+    "description": "ความจุ 4TB, อินเทอร์เฟซ NVMe PCIe 4.0, รับประกัน 3 ปี",
+    "price": "6000.00",
+    "created_at": "2026-08-10T12:04:58.517Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 150,
+  "fields": {
+    "name": "Headset I9403-147",
+    "brand": 5,
+    "category": 15,
+    "description": "ระบบเสียง Spatial Audio, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ ไร้สาย 2.4GHz",
+    "price": "5700.00",
+    "created_at": "2026-08-10T12:04:58.520Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 151,
+  "fields": {
+    "name": "Laptop F1438-148",
+    "brand": 10,
+    "category": 2,
+    "description": "Intel Core i9, RAM 8GB, SSD 512GB NVMe, จอ 14 นิ้ว FHD, สีขาว",
+    "price": "37500.00",
+    "created_at": "2026-08-10T12:04:58.524Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 152,
+  "fields": {
+    "name": "Memory Kit W7502-149",
+    "brand": 2,
+    "category": 13,
+    "description": "RAM 96GB แบบ DDR4, ความเร็ว 7200MHz, ชุดระบายความร้อนในตัว",
+    "price": "5000.00",
+    "created_at": "2026-08-10T12:04:58.528Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 153,
+  "fields": {
+    "name": "Webcam F5456-150",
+    "brand": 8,
+    "category": 8,
+    "description": "ความละเอียด 2K QHD, 30fps, ไมโครโฟนคู่และฝาปิดเลนส์",
+    "price": "3300.00",
+    "created_at": "2026-08-10T12:04:58.532Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 154,
+  "fields": {
+    "name": "Graphics Card L2260-151",
+    "brand": 5,
+    "category": 6,
+    "description": "หน่วยความจำ 8GB GDDR6, พัดลม 2 ตัว, รองรับ Ray Tracing",
+    "price": "55400.00",
+    "created_at": "2026-08-10T12:04:58.535Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 155,
+  "fields": {
+    "name": "Motherboard Q6288-152",
+    "brand": 4,
+    "category": 4,
+    "description": "ขนาด Micro-ATX, รองรับ DDR4, Wi-Fi 6E, ช่อง M.2 จำนวน 5 ช่อง",
+    "price": "7300.00",
+    "created_at": "2026-08-10T12:04:58.539Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 156,
+  "fields": {
+    "name": "Headset D9200-153",
+    "brand": 10,
+    "category": 15,
+    "description": "ระบบเสียง Stereo, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ ไร้สาย 2.4GHz",
+    "price": "2700.00",
+    "created_at": "2026-08-10T12:04:58.543Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 157,
+  "fields": {
+    "name": "Power Supply A7235-154",
+    "brand": 5,
+    "category": 1,
+    "description": "กำลังไฟ 1000W, มาตรฐาน 80 Plus Gold, สายถอดได้",
+    "price": "8000.00",
+    "created_at": "2026-08-10T12:04:58.546Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 158,
+  "fields": {
+    "name": "Laptop V9711-155",
+    "brand": 5,
+    "category": 2,
+    "description": "Intel Core i7, RAM 8GB, SSD 1TB NVMe, จอ 16 นิ้ว 2.5K, สีดำ",
+    "price": "24700.00",
+    "created_at": "2026-08-10T12:04:58.550Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 159,
+  "fields": {
+    "name": "Keyboard I4962-156",
+    "brand": 7,
+    "category": 5,
+    "description": "คีย์บอร์ดไร้สาย, สวิตช์น้ำตาล, ไฟ RGB, รองรับภาษาไทย",
+    "price": "4700.00",
+    "created_at": "2026-08-10T12:04:58.553Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 160,
+  "fields": {
+    "name": "Graphics Card O8108-157",
+    "brand": 7,
+    "category": 6,
+    "description": "หน่วยความจำ 24GB GDDR6X, พัดลม 2 ตัว, รองรับ Ray Tracing",
+    "price": "34700.00",
+    "created_at": "2026-08-10T12:04:58.557Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 161,
+  "fields": {
+    "name": "Monitor Y5896-158",
+    "brand": 9,
+    "category": 16,
+    "description": "จอ 24 นิ้ว, ความละเอียด Full HD, รีเฟรชเรต 165Hz",
+    "price": "11500.00",
+    "created_at": "2026-08-10T12:04:58.560Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 162,
+  "fields": {
+    "name": "Desktop P1823-159",
+    "brand": 7,
+    "category": 10,
+    "description": "AMD Ryzen 9, RAM 32GB, SSD 2TB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "76300.00",
+    "created_at": "2026-08-10T12:04:58.563Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 163,
+  "fields": {
+    "name": "SSD N3468-160",
+    "brand": 7,
+    "category": 9,
+    "description": "ความจุ 2TB, อินเทอร์เฟซ NVMe PCIe 5.0, รับประกัน 3 ปี",
+    "price": "4500.00",
+    "created_at": "2026-08-10T12:04:58.566Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 164,
+  "fields": {
+    "name": "Laptop Q5333-161",
+    "brand": 1,
+    "category": 2,
+    "description": "AMD Ryzen 5, RAM 8GB, SSD 1TB NVMe, จอ 15.6 นิ้ว FHD, สีขาว",
+    "price": "58200.00",
+    "created_at": "2026-08-10T12:04:58.570Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 165,
+  "fields": {
+    "name": "Webcam M3461-162",
+    "brand": 7,
+    "category": 8,
+    "description": "ความละเอียด 2K QHD, 60fps, ไมโครโฟนคู่และฝาปิดเลนส์",
+    "price": "2400.00",
+    "created_at": "2026-08-10T12:04:58.573Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 166,
+  "fields": {
+    "name": "Power Supply X6124-163",
+    "brand": 5,
+    "category": 1,
+    "description": "กำลังไฟ 650W, มาตรฐาน 80 Plus Titanium, สายถอดได้",
+    "price": "3000.00",
+    "created_at": "2026-08-10T12:04:58.577Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 167,
+  "fields": {
+    "name": "Desktop E4158-164",
+    "brand": 10,
+    "category": 10,
+    "description": "AMD Ryzen 9, RAM 8GB, SSD 1TB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "48300.00",
+    "created_at": "2026-08-10T12:04:58.580Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 168,
+  "fields": {
+    "name": "Mouse K7464-165",
+    "brand": 8,
+    "category": 11,
+    "description": "เมาส์ไร้สาย, ความละเอียด 16,000 DPI, ปุ่มตั้งโปรแกรมได้ 5 ปุ่ม",
+    "price": "1200.00",
+    "created_at": "2026-08-10T12:04:58.584Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 169,
+  "fields": {
+    "name": "Monitor L1342-166",
+    "brand": 7,
+    "category": 16,
+    "description": "จอ 32 นิ้ว, ความละเอียด 2K QHD, รีเฟรชเรต 144Hz",
+    "price": "25000.00",
+    "created_at": "2026-08-10T12:04:58.588Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 170,
+  "fields": {
+    "name": "Mouse H5798-167",
+    "brand": 2,
+    "category": 11,
+    "description": "เมาส์ไร้สาย, ความละเอียด 20,000 DPI, ปุ่มตั้งโปรแกรมได้ 9 ปุ่ม",
+    "price": "3200.00",
+    "created_at": "2026-08-10T12:04:58.592Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 171,
+  "fields": {
+    "name": "Desktop U1752-168",
+    "brand": 4,
+    "category": 10,
+    "description": "Intel Core i7, RAM 16GB, SSD 1TB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "55900.00",
+    "created_at": "2026-08-10T12:04:58.596Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 172,
+  "fields": {
+    "name": "Router C4351-169",
+    "brand": 10,
+    "category": 14,
+    "description": "เราเตอร์ Wi-Fi 6, ความเร็วรวม 3.0Gbps, พอร์ต Gigabit LAN 4 ช่อง",
+    "price": "14200.00",
+    "created_at": "2026-08-10T12:04:58.601Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 173,
+  "fields": {
+    "name": "Mouse A6399-170",
+    "brand": 7,
+    "category": 11,
+    "description": "เมาส์ไร้สาย, ความละเอียด 8,000 DPI, ปุ่มตั้งโปรแกรมได้ 9 ปุ่ม",
+    "price": "1900.00",
+    "created_at": "2026-08-10T12:04:58.606Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 174,
+  "fields": {
+    "name": "Memory Kit B2715-171",
+    "brand": 1,
+    "category": 13,
+    "description": "RAM 16GB แบบ DDR5, ความเร็ว 5600MHz, ชุดระบายความร้อนในตัว",
+    "price": "10200.00",
+    "created_at": "2026-08-10T12:04:58.609Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 175,
+  "fields": {
+    "name": "PC Case V8423-172",
+    "brand": 4,
+    "category": 3,
+    "description": "เคส Mid Tower, กระจกนิรภัย, รองรับหม้อน้ำ 360 มม., สีขาว",
+    "price": "3300.00",
+    "created_at": "2026-08-10T12:04:58.613Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 176,
+  "fields": {
+    "name": "Keyboard Q4902-173",
+    "brand": 8,
+    "category": 5,
+    "description": "คีย์บอร์ดแมคคานิคอล, สวิตช์น้ำตาล, ไฟ RGB, รองรับภาษาไทย",
+    "price": "6200.00",
+    "created_at": "2026-08-10T12:04:58.617Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 177,
+  "fields": {
+    "name": "Mouse Z7563-174",
+    "brand": 8,
+    "category": 11,
+    "description": "เมาส์ไร้สาย, ความละเอียด 16,000 DPI, ปุ่มตั้งโปรแกรมได้ 5 ปุ่ม",
+    "price": "900.00",
+    "created_at": "2026-08-10T12:04:58.620Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 178,
+  "fields": {
+    "name": "Memory Kit U4846-175",
+    "brand": 7,
+    "category": 13,
+    "description": "RAM 32GB แบบ DDR5, ความเร็ว 3200MHz, ชุดระบายความร้อนในตัว",
+    "price": "5800.00",
+    "created_at": "2026-08-10T12:04:58.623Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 179,
+  "fields": {
+    "name": "Router G9971-176",
+    "brand": 10,
+    "category": 14,
+    "description": "เราเตอร์ Wi-Fi 7, ความเร็วรวม 1.8Gbps, พอร์ต Gigabit LAN 4 ช่อง",
+    "price": "5800.00",
+    "created_at": "2026-08-10T12:04:58.627Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 180,
+  "fields": {
+    "name": "Laptop Y8578-177",
+    "brand": 6,
+    "category": 2,
+    "description": "AMD Ryzen 7, RAM 64GB, SSD 1TB NVMe, จอ 13.3 นิ้ว FHD, สีขาว",
+    "price": "40000.00",
+    "created_at": "2026-08-10T12:04:58.630Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 181,
+  "fields": {
+    "name": "Monitor S6550-178",
+    "brand": 3,
+    "category": 16,
+    "description": "จอ 27 นิ้ว, ความละเอียด 2K QHD, รีเฟรชเรต 100Hz",
+    "price": "8700.00",
+    "created_at": "2026-08-10T12:04:58.634Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 182,
+  "fields": {
+    "name": "Memory Kit K7355-179",
+    "brand": 6,
+    "category": 13,
+    "description": "RAM 32GB แบบ DDR4, ความเร็ว 6400MHz, ชุดระบายความร้อนในตัว",
+    "price": "11800.00",
+    "created_at": "2026-08-10T12:04:58.637Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 183,
+  "fields": {
+    "name": "Webcam B5494-180",
+    "brand": 7,
+    "category": 8,
+    "description": "ความละเอียด 4K UHD, 30fps, ไมโครโฟนคู่และฝาปิดเลนส์",
+    "price": "5400.00",
+    "created_at": "2026-08-10T12:04:58.641Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 184,
+  "fields": {
+    "name": "Processor Y5008-181",
+    "brand": 9,
+    "category": 12,
+    "description": "8 คอร์, ความเร็วสูงสุด 6.0GHz, รองรับงานทั่วไปและเกม",
+    "price": "21300.00",
+    "created_at": "2026-08-10T12:04:58.644Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 185,
+  "fields": {
+    "name": "Desktop N3342-182",
+    "brand": 2,
+    "category": 10,
+    "description": "Intel Core i5, RAM 16GB, SSD 2TB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "27000.00",
+    "created_at": "2026-08-10T12:04:58.648Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 186,
+  "fields": {
+    "name": "Headset D4802-183",
+    "brand": 4,
+    "category": 15,
+    "description": "ระบบเสียง Spatial Audio, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ 3.5 มม.",
+    "price": "5100.00",
+    "created_at": "2026-08-10T12:04:58.653Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 187,
+  "fields": {
+    "name": "Desktop Z4654-184",
+    "brand": 2,
+    "category": 10,
+    "description": "AMD Ryzen 9, RAM 64GB, SSD 1TB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "59900.00",
+    "created_at": "2026-08-10T12:04:58.656Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 188,
+  "fields": {
+    "name": "Headset P8736-185",
+    "brand": 10,
+    "category": 15,
+    "description": "ระบบเสียง Spatial Audio, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ ไร้สาย 2.4GHz",
+    "price": "5000.00",
+    "created_at": "2026-08-10T12:04:58.660Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 189,
+  "fields": {
+    "name": "UPS D4206-186",
+    "brand": 4,
+    "category": 7,
+    "description": "กำลังไฟ 1000VA, ป้องกันไฟกระชาก, สำรองไฟประมาณ 45 นาที",
+    "price": "4100.00",
+    "created_at": "2026-08-10T12:04:58.663Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 190,
+  "fields": {
+    "name": "Graphics Card S4055-187",
+    "brand": 5,
+    "category": 6,
+    "description": "หน่วยความจำ 8GB GDDR6X, พัดลม 2 ตัว, รองรับ Ray Tracing",
+    "price": "28100.00",
+    "created_at": "2026-08-10T12:04:58.666Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 191,
+  "fields": {
+    "name": "Headset V9319-188",
+    "brand": 9,
+    "category": 15,
+    "description": "ระบบเสียง Stereo, ไมโครโฟนตัดเสียงรบกวน, เชื่อมต่อ 3.5 มม.",
+    "price": "4800.00",
+    "created_at": "2026-08-10T12:04:58.671Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 192,
+  "fields": {
+    "name": "Monitor K5803-189",
+    "brand": 9,
+    "category": 16,
+    "description": "จอ 32 นิ้ว, ความละเอียด 2K QHD, รีเฟรชเรต 144Hz",
+    "price": "9800.00",
+    "created_at": "2026-08-10T12:04:58.676Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 193,
+  "fields": {
+    "name": "UPS S3092-190",
+    "brand": 6,
+    "category": 7,
+    "description": "กำลังไฟ 3000VA, ป้องกันไฟกระชาก, สำรองไฟประมาณ 30 นาที",
+    "price": "4800.00",
+    "created_at": "2026-08-10T12:04:58.681Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 194,
+  "fields": {
+    "name": "SSD A6777-191",
+    "brand": 1,
+    "category": 9,
+    "description": "ความจุ 500GB, อินเทอร์เฟซ NVMe PCIe 5.0, รับประกัน 5 ปี",
+    "price": "11400.00",
+    "created_at": "2026-08-10T12:04:58.686Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 195,
+  "fields": {
+    "name": "Processor I1020-192",
+    "brand": 7,
+    "category": 12,
+    "description": "24 คอร์, ความเร็วสูงสุด 5.2GHz, รองรับงานทั่วไปและเกม",
+    "price": "15000.00",
+    "created_at": "2026-08-10T12:04:58.690Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 196,
+  "fields": {
+    "name": "Laptop B3334-193",
+    "brand": 8,
+    "category": 2,
+    "description": "AMD Ryzen 7, RAM 16GB, SSD 2TB NVMe, จอ 16 นิ้ว 2.5K, สีขาว",
+    "price": "41000.00",
+    "created_at": "2026-08-10T12:04:58.694Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 197,
+  "fields": {
+    "name": "Desktop R1737-194",
+    "brand": 5,
+    "category": 10,
+    "description": "AMD Ryzen 9, RAM 32GB, SSD 1TB NVMe, พร้อม Wi-Fi และ Windows 11",
+    "price": "63700.00",
+    "created_at": "2026-08-10T12:04:58.698Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 198,
+  "fields": {
+    "name": "Power Supply K2038-195",
+    "brand": 9,
+    "category": 1,
+    "description": "กำลังไฟ 1000W, มาตรฐาน 80 Plus Platinum, สายถอดได้",
+    "price": "3200.00",
+    "created_at": "2026-08-10T12:04:58.701Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 199,
+  "fields": {
+    "name": "Keyboard D3000-196",
+    "brand": 7,
+    "category": 5,
+    "description": "คีย์บอร์ดเมมเบรน, สวิตช์น้ำเงิน, ไฟ RGB, รองรับภาษาไทย",
+    "price": "4800.00",
+    "created_at": "2026-08-10T12:04:58.705Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 200,
+  "fields": {
+    "name": "Graphics Card R7626-197",
+    "brand": 10,
+    "category": 6,
+    "description": "หน่วยความจำ 12GB GDDR6X, พัดลม 3 ตัว, รองรับ Ray Tracing",
+    "price": "33900.00",
+    "created_at": "2026-08-10T12:04:58.708Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 201,
+  "fields": {
+    "name": "Router F2574-198",
+    "brand": 2,
+    "category": 14,
+    "description": "เราเตอร์ Wi-Fi 7, ความเร็วรวม 9.2Gbps, พอร์ต Gigabit LAN 5 ช่อง",
+    "price": "4700.00",
+    "created_at": "2026-08-10T12:04:58.711Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 202,
+  "fields": {
+    "name": "Power Supply C1179-199",
+    "brand": 4,
+    "category": 1,
+    "description": "กำลังไฟ 850W, มาตรฐาน 80 Plus Bronze, สายกึ่งถอดได้",
+    "price": "3300.00",
+    "created_at": "2026-08-10T12:04:58.715Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 203,
+  "fields": {
+    "name": "Keyboard X7801-200",
+    "brand": 7,
+    "category": 5,
+    "description": "คีย์บอร์ดแมคคานิคอล, สวิตช์น้ำตาล, ไฟ RGB, รองรับภาษาไทย",
+    "price": "3400.00",
+    "created_at": "2026-08-10T12:04:58.718Z"
+  }
+}
+]
