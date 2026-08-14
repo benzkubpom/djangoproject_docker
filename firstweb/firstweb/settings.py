@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',  # ใช้ตัวกรอง intcomma คั่นหลักพันของราคา
     'myapp',
     'shop',
 
