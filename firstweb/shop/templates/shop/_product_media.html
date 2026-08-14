@@ -1,0 +1,137 @@
+{% comment %}
+  รูปสินค้า 1 ช่อง ใช้ร่วมกันระหว่างการ์ดหน้ารวมและหน้ารายละเอียด
+  พารามิเตอร์:
+    product  — ออบเจ็กต์ Product
+    ratio    — คลาส aspect ของกรอบ (ค่าเริ่มต้น aspect-[4/3])
+    priority — ใส่ค่าอะไรก็ได้เพื่อโหลดรูปทันที (ใช้กับรูปหลักหน้ารายละเอียด)
+
+  ถ้าสินค้ายังไม่มีรูปถ่าย จะวาดภาพลายเส้นตามหมวดหมู่แทน ไม่ปล่อยให้เป็นช่องว่าง
+{% endcomment %}
+<div class="relative {{ ratio|default:'aspect-[4/3]' }} w-full overflow-hidden bg-bone">
+
+  {% if product.photo_url %}
+    <img src="{{ product.photo_url }}"
+         alt="{{ product.title }} จาก {{ product.brand.name }}"
+         {% if priority %}loading="eager" fetchpriority="high"{% else %}loading="lazy" decoding="async"{% endif %}
+         class="absolute inset-0 h-full w-full object-cover">
+
+  {% else %}
+    {# ภาพลายเส้นแทนรูปถ่าย: ดำเป็นเส้นหลัก แดงเป็นจุดเน้นจุดเดียวต่อภาพ #}
+    <svg viewBox="0 0 64 64" role="img"
+         aria-label="ภาพประกอบหมวด {{ product.category.name }} (ยังไม่มีรูปถ่ายสินค้า)"
+         class="absolute inset-0 h-full w-full p-[14%] text-ink"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="square" stroke-linejoin="miter">
+
+      {% if product.icon == 'psu' %}
+        <rect x="6" y="16" width="52" height="32"></rect>
+        <circle cx="25" cy="32" r="10"></circle>
+        <circle cx="25" cy="32" r="2.5" class="stroke-red"></circle>
+        <rect x="43" y="24" width="9" height="7"></rect>
+        <path d="M43 39h9"></path>
+
+      {% elif product.icon == 'laptop' %}
+        <rect x="12" y="12" width="40" height="27"></rect>
+        <path d="M18 18h28" class="stroke-red"></path>
+        <path d="M4 47h56"></path>
+        <path d="M12 39h40l4 8H8z"></path>
+
+      {% elif product.icon == 'case' %}
+        <rect x="18" y="6" width="28" height="52"></rect>
+        <path d="M24 14h16M24 20h16M24 26h16"></path>
+        <circle cx="26" cy="48" r="2.5" class="stroke-red"></circle>
+        <path d="M33 48h13"></path>
+
+      {% elif product.icon == 'mainboard' %}
+        <rect x="6" y="8" width="52" height="48"></rect>
+        <rect x="14" y="16" width="16" height="16"></rect>
+        <path d="M38 16h14M38 24h14"></path>
+        <path d="M14 42h38" class="stroke-red"></path>
+        <path d="M14 50h24"></path>
+
+      {% elif product.icon == 'keyboard' %}
+        <rect x="4" y="20" width="56" height="26"></rect>
+        <path d="M10 27h6M20 27h6M30 27h6M40 27h6M50 27h4"></path>
+        <path d="M10 34h6M20 34h6M30 34h6M40 34h14"></path>
+        <path d="M20 40h24" class="stroke-red"></path>
+
+      {% elif product.icon == 'gpu' %}
+        <rect x="4" y="20" width="46" height="22"></rect>
+        <circle cx="17" cy="31" r="6"></circle>
+        <circle cx="35" cy="31" r="6"></circle>
+        <circle cx="35" cy="31" r="1.5" class="stroke-red"></circle>
+        <path d="M50 22v18h6V22z"></path>
+        <path d="M12 42v5h20v-5"></path>
+
+      {% elif product.icon == 'ups' %}
+        <rect x="10" y="12" width="44" height="40"></rect>
+        <path d="M33 20l-8 13h7l-3 11 9-14h-7z" class="stroke-red"></path>
+        <path d="M16 46h8"></path>
+        <path d="M16 18h6"></path>
+
+      {% elif product.icon == 'webcam' %}
+        <circle cx="32" cy="26" r="14"></circle>
+        <circle cx="32" cy="26" r="5.5" class="stroke-red"></circle>
+        <path d="M18 44h28l-5 8H23z"></path>
+        <path d="M14 56h36"></path>
+
+      {% elif product.icon == 'storage' %}
+        <rect x="6" y="16" width="52" height="32"></rect>
+        <circle cx="26" cy="32" r="11"></circle>
+        <circle cx="26" cy="32" r="2"></circle>
+        <path d="M44 22l-9 16" class="stroke-red"></path>
+
+      {% elif product.icon == 'desktop' %}
+        <rect x="6" y="8" width="18" height="48"></rect>
+        <circle cx="15" cy="16" r="2.5" class="stroke-red"></circle>
+        <path d="M11 24h8M11 30h8"></path>
+        <rect x="32" y="14" width="26" height="20"></rect>
+        <path d="M45 34v10"></path>
+        <path d="M37 44h16"></path>
+
+      {% elif product.icon == 'mouse' %}
+        <path d="M32 8c10 0 17 8 17 20 0 15-7 26-17 26s-17-11-17-26C15 16 22 8 32 8z"></path>
+        <path d="M32 8v18"></path>
+        <path d="M32 14v8" class="stroke-red" stroke-width="3"></path>
+
+      {% elif product.icon == 'cpu' %}
+        <rect x="18" y="18" width="28" height="28"></rect>
+        <rect x="27" y="27" width="10" height="10" class="stroke-red"></rect>
+        <path d="M25 10v8M32 10v8M39 10v8"></path>
+        <path d="M25 46v8M32 46v8M39 46v8"></path>
+        <path d="M10 25h8M10 32h8M10 39h8"></path>
+        <path d="M46 25h8M46 32h8M46 39h8"></path>
+
+      {% elif product.icon == 'ram' %}
+        <path d="M4 20h56v20H37l-3 5h-4l-3-5H4z"></path>
+        <rect x="10" y="26" width="9" height="9"></rect>
+        <rect x="24" y="26" width="9" height="9"></rect>
+        <rect x="38" y="26" width="9" height="9" class="stroke-red"></rect>
+        <path d="M8 45h8M48 45h8"></path>
+
+      {% elif product.icon == 'network' %}
+        <rect x="8" y="34" width="48" height="18"></rect>
+        <path d="M16 43h6M26 43h6M36 43h6"></path>
+        <path d="M20 34V22M44 34V22"></path>
+        <path d="M24 16a12 12 0 0 1 16 0" class="stroke-red"></path>
+
+      {% elif product.icon == 'headset' %}
+        <path d="M12 38V32a20 20 0 0 1 40 0v6"></path>
+        <rect x="6" y="36" width="10" height="16"></rect>
+        <rect x="48" y="36" width="10" height="16"></rect>
+        <path d="M48 50v4H34" class="stroke-red"></path>
+
+      {% elif product.icon == 'monitor' %}
+        <rect x="6" y="10" width="52" height="34"></rect>
+        <path d="M12 38h40" class="stroke-red"></path>
+        <path d="M32 44v8"></path>
+        <path d="M20 52h24"></path>
+
+      {% else %}
+        <rect x="10" y="10" width="44" height="44"></rect>
+        <path d="M10 40l14-14 12 12 8-8 10 10"></path>
+        <circle cx="24" cy="21" r="3.5" class="stroke-red"></circle>
+      {% endif %}
+    </svg>
+  {% endif %}
+</div>

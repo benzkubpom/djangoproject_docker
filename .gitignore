@@ -1,0 +1,40 @@
+# ============================================
+# ขึ้น GitHub เฉพาะโฟลเดอร์ firstweb เท่านั้น
+# ============================================
+# ข้าม (ignore) ทุกอย่างที่ root ก่อน
+/*
+
+# แล้วค่อยยกเว้นเฉพาะที่ต้องการ
+!/.gitignore
+!/firstweb/
+
+# ============================================
+# ภายใน firstweb/ : ไฟล์ที่ไม่ควรขึ้น repo
+# ============================================
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+/firstweb/media/
+/firstweb/staticfiles/
+*.log
+
+# ความลับ - ห้ามขึ้น GitHub เด็ดขาด
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -27,17 +27,23 @@
     <!-- ═══ ซ้าย: ตัวสินค้าและสเปก ═══ -->
     <div class="lg:col-span-7">
 
-      <!-- แผ่นระบุรุ่น: สินค้าชุดนี้ไม่มีรูปในฐานข้อมูล จึงใช้รหัสรุ่นเป็นตัวแทนภาพ -->
-      <div class="border border-ink">
+      <!-- แผ่นรูปสินค้า: ใช้รูปถ่ายถ้ามี ถ้ายังไม่มีจะเป็นภาพลายเส้นตามหมวดหมู่ -->
+      <figure class="border border-ink">
         <div class="flex items-center justify-between gap-4 border-b border-line px-6 py-3">
           <span class="text-xs text-ash">{{ product.category.name }}</span>
-          <span class="label-latin font-mono text-[11px] text-ash">Model</span>
+          <span class="label-latin font-mono text-[11px] text-ash">
+            Model{% if product.code %} {{ product.code }}{% endif %}
+          </span>
         </div>
-        <div class="px-6 py-10 sm:py-14">
-          <p class="break-all font-mono text-4xl font-semibold tracking-tight sm:text-6xl">
-            {% if product.code %}{{ product.code }}{% else %}{{ product.title }}{% endif %}
-          </p>
-        </div>
+
+        {% include "shop/_product_media.html" with product=product ratio="aspect-[4/3]" priority=1 %}
+
+        {% if not product.photo_url %}
+          <figcaption class="border-t border-line px-6 py-3 text-xs leading-relaxed text-ash">
+            สินค้ารายการนี้ยังไม่มีรูปถ่ายในระบบ ภาพที่เห็นเป็นภาพประกอบตามหมวดหมู่
+          </figcaption>
+        {% endif %}
+
         <div class="flex items-center justify-between gap-4 border-t border-line px-6 py-3">
           <span class="font-mono text-[11px] text-ash">{{ product.brand.name|upper }}</span>
           <span class="inline-flex items-center gap-2 text-xs text-ash">
@@ -45,7 +51,7 @@
             พร้อมจัดส่ง
           </span>
         </div>
-      </div>
+      </figure>
 
       <h1 class="mt-10 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">{{ product.title }}</h1>
       <p class="mt-2 text-base text-ash">
