@@ -1,0 +1,260 @@
+{% extends "shop/base.html" %}
+{% load humanize %}
+
+{% block title %}{{ product.name }} &middot; SHELL{% endblock %}
+{% block meta_description %}{{ product.title }} จาก {{ product.brand.name }} — {{ product.description|truncatechars:120 }}{% endblock %}
+
+{% block content %}
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+  <!-- ── เส้นทางย้อนกลับ ── -->
+  <nav aria-label="เส้นทาง" class="flex flex-wrap items-center gap-2 border-b border-line py-4 text-xs text-ash">
+    <a href="{% url 'shop:product_list' %}"
+       class="transition-colors duration-200 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2">
+      สินค้าทั้งหมด
+    </a>
+    <span aria-hidden="true" class="text-line">/</span>
+    <a href="{% url 'shop:product_list' %}?category={{ product.category.pk }}"
+       class="transition-colors duration-200 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2">
+      {{ product.category.name }}
+    </a>
+    <span aria-hidden="true" class="text-line">/</span>
+    <span class="text-ink" aria-current="page">{{ product.title }}</span>
+  </nav>
+
+  <div class="grid gap-12 py-10 lg:grid-cols-12 lg:gap-16 lg:py-16">
+
+    <!-- ═══ ซ้าย: ตัวสินค้าและสเปก ═══ -->
+    <div class="lg:col-span-7">
+
+      <!-- แผ่นระบุรุ่น: สินค้าชุดนี้ไม่มีรูปในฐานข้อมูล จึงใช้รหัสรุ่นเป็นตัวแทนภาพ -->
+      <div class="border border-ink">
+        <div class="flex items-center justify-between gap-4 border-b border-line px-6 py-3">
+          <span class="text-xs text-ash">{{ product.category.name }}</span>
+          <span class="label-latin font-mono text-[11px] text-ash">Model</span>
+        </div>
+        <div class="px-6 py-10 sm:py-14">
+          <p class="break-all font-mono text-4xl font-semibold tracking-tight sm:text-6xl">
+            {% if product.code %}{{ product.code }}{% else %}{{ product.title }}{% endif %}
+          </p>
+        </div>
+        <div class="flex items-center justify-between gap-4 border-t border-line px-6 py-3">
+          <span class="font-mono text-[11px] text-ash">{{ product.brand.name|upper }}</span>
+          <span class="inline-flex items-center gap-2 text-xs text-ash">
+            <span aria-hidden="true" class="inline-block h-1.5 w-1.5 rounded-full bg-red"></span>
+            พร้อมจัดส่ง
+          </span>
+        </div>
+      </div>
+
+      <h1 class="mt-10 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">{{ product.title }}</h1>
+      <p class="mt-2 text-base text-ash">
+        แบรนด์
+        <a href="{% url 'shop:product_list' %}?brand={{ product.brand.pk }}"
+           class="text-ink underline underline-offset-4 transition-colors duration-200 hover:text-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2">
+          {{ product.brand.name }}
+        </a>
+      </p>
+
+      <!-- สเปก: description ในฐานข้อมูลคั่นด้วยจุลภาค แยกออกมาเป็นแถวได้ตรง ๆ -->
+      <section class="mt-10" aria-labelledby="spec-heading">
+        <h2 id="spec-heading" class="label-latin font-mono text-xs text-red">Specification</h2>
+
+        {% if product.spec_list %}
+          <ul class="mt-4 border-t border-line">
+            {% for spec in product.spec_list %}
+              <li class="flex items-baseline gap-4 border-b border-line py-4">
+                <span aria-hidden="true" class="mt-1 h-px w-4 shrink-0 bg-red"></span>
+                <span class="text-base leading-relaxed">{{ spec }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="mt-4 border-t border-line py-4 text-sm text-ash">
+            สินค้ารายการนี้ยังไม่มีข้อมูลสเปกในระบบ ติดต่อร้านเพื่อขอรายละเอียดเพิ่มเติม
+          </p>
+        {% endif %}
+      </section>
+    </div>
+
+    <!-- ═══ ขวา: แผงราคาและสั่งซื้อ ═══ -->
+    <div class="lg:col-span-5">
+      <div class="border border-ink p-6 lg:sticky lg:top-20">
+
+        <p class="text-xs text-ash">ราคา</p>
+        <p class="mt-1 font-mono text-4xl font-semibold tracking-tight text-red">
+          ฿{{ product.price|floatformat:0|intcomma }}
+        </p>
+        <p class="mt-2 text-xs text-ash">ราคารวมภาษีมูลค่าเพิ่มแล้ว</p>
+
+        <!-- จำนวน -->
+        <div class="mt-8 flex items-center justify-between gap-4">
+          <label for="qty" class="text-sm">จำนวน</label>
+          <div class="flex items-center border border-line">
+            <button type="button" id="qty-minus" aria-label="ลดจำนวน 1 ชิ้น"
+                    class="flex h-11 w-11 cursor-pointer items-center justify-center text-lg text-ink transition-colors duration-200 hover:bg-bone focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-red">
+              &minus;
+            </button>
+            <input type="number" id="qty" name="qty" value="1" min="1" max="99" inputmode="numeric"
+                   data-price="{{ product.price|floatformat:0 }}"
+                   class="h-11 w-14 border-x border-line bg-paper text-center font-mono text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-red">
+            <button type="button" id="qty-plus" aria-label="เพิ่มจำนวน 1 ชิ้น"
+                    class="flex h-11 w-11 cursor-pointer items-center justify-center text-lg text-ink transition-colors duration-200 hover:bg-bone focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-red">
+              +
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-4 flex items-baseline justify-between border-t border-line pt-4">
+          <span class="text-sm text-ash">รวม</span>
+          <span id="qty-total" class="font-mono text-lg font-semibold" aria-live="polite">
+            ฿{{ product.price|floatformat:0|intcomma }}
+          </span>
+        </div>
+
+        <button type="button" id="add-to-cart"
+                class="mt-6 h-12 w-full cursor-pointer bg-red text-sm font-medium text-paper transition-colors duration-200 hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2">
+          หยิบใส่ตะกร้า
+        </button>
+        <p id="cart-status" role="status" aria-live="polite" class="mt-2 min-h-[1.25rem] text-center text-xs text-ash"></p>
+
+        <!-- ข้อมูลอ้างอิง -->
+        <dl class="mt-6 space-y-3 border-t border-line pt-6 text-sm">
+          {% if product.code %}
+            <div class="flex items-center justify-between gap-4">
+              <dt class="text-ash">รหัสสินค้า</dt>
+              <dd>
+                <button type="button" id="copy-code" data-code="{{ product.code }}"
+                        class="group inline-flex cursor-pointer items-center gap-1.5 font-mono text-ink transition-colors duration-200 hover:text-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2">
+                  <span>{{ product.code }}</span>
+                  <svg aria-hidden="true" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="12" height="12" rx="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="sr-only">คัดลอกรหัสสินค้า</span>
+                </button>
+              </dd>
+            </div>
+          {% endif %}
+          <div class="flex items-center justify-between gap-4">
+            <dt class="text-ash">หมวดหมู่</dt>
+            <dd class="text-right">{{ product.category.name }}</dd>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <dt class="text-ash">เพิ่มเข้าระบบ</dt>
+            <dd class="font-mono text-xs">{{ product.created_at|date:"d.m.Y" }}</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── สินค้าหมวดเดียวกัน ── -->
+  {% if related %}
+    <section aria-labelledby="related-heading" class="border-t border-line py-12 sm:py-16">
+      <div class="flex flex-wrap items-baseline justify-between gap-3">
+        <h2 id="related-heading" class="text-2xl font-semibold tracking-tight">
+          สินค้าอื่นในหมวด {{ product.category.name }}
+        </h2>
+        <a href="{% url 'shop:product_list' %}?category={{ product.category.pk }}"
+           class="text-sm text-ash underline underline-offset-4 transition-colors duration-200 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2">
+          ดูทั้งหมวด
+        </a>
+      </div>
+
+      <div class="mt-6 grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+        {% for item in related %}
+          {% include "shop/_product_card.html" with product=item %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+  (function () {
+    var baht = new Intl.NumberFormat('th-TH');
+
+    // ── ตัวปรับจำนวน + ยอดรวม ──
+    var qty = document.getElementById('qty');
+    var total = document.getElementById('qty-total');
+
+    if (qty && total) {
+      var unitPrice = parseFloat(qty.dataset.price) || 0;
+      var MIN = 1, MAX = 99;
+
+      function clamp(n) {
+        if (isNaN(n)) return MIN;
+        return Math.min(MAX, Math.max(MIN, Math.floor(n)));
+      }
+
+      function render() {
+        var n = clamp(parseInt(qty.value, 10));
+        qty.value = n;
+        total.textContent = '฿' + baht.format(unitPrice * n);
+      }
+
+      function step(delta) {
+        qty.value = clamp(parseInt(qty.value, 10) + delta);
+        render();
+      }
+
+      document.getElementById('qty-minus').addEventListener('click', function () { step(-1); });
+      document.getElementById('qty-plus').addEventListener('click', function () { step(1); });
+      qty.addEventListener('change', render);
+      render();
+    }
+
+    // ── คัดลอกรหัสสินค้า ──
+    var copyBtn = document.getElementById('copy-code');
+    if (copyBtn) {
+      var label = copyBtn.querySelector('span');
+      var original = label.textContent;
+      var resetTimer;
+
+      copyBtn.addEventListener('click', function () {
+        var code = copyBtn.dataset.code;
+        var done = function () {
+          label.textContent = 'คัดลอกแล้ว';
+          clearTimeout(resetTimer);
+          resetTimer = setTimeout(function () { label.textContent = original; }, 1600);
+        };
+
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(code).then(done).catch(function () {
+            label.textContent = 'คัดลอกไม่สำเร็จ';
+            clearTimeout(resetTimer);
+            resetTimer = setTimeout(function () { label.textContent = original; }, 1600);
+          });
+        } else {
+          // clipboard API ใช้ได้เฉพาะ HTTPS/localhost — เผื่อกรณีอื่นไว้ด้วย
+          var tmp = document.createElement('textarea');
+          tmp.value = code;
+          tmp.setAttribute('readonly', '');
+          tmp.style.position = 'absolute';
+          tmp.style.left = '-9999px';
+          document.body.appendChild(tmp);
+          tmp.select();
+          try { document.execCommand('copy'); done(); } catch (e) { /* ไม่รองรับ */ }
+          document.body.removeChild(tmp);
+        }
+      });
+    }
+
+    // ── ปุ่มหยิบใส่ตะกร้า (ยังไม่มีระบบตะกร้าหลังบ้าน จึงตอบกลับที่หน้าเว็บก่อน) ──
+    var addBtn = document.getElementById('add-to-cart');
+    var status = document.getElementById('cart-status');
+    if (addBtn && status) {
+      addBtn.addEventListener('click', function () {
+        var n = qty ? qty.value : 1;
+        status.textContent = 'เพิ่ม ' + n + ' ชิ้นลงตะกร้าแล้ว';
+      });
+    }
+  })();
+</script>
+{% endblock %}

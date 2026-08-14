@@ -1,0 +1,218 @@
+{% extends "shop/base.html" %}
+{% load humanize %}
+
+{% block title %}สินค้าทั้งหมด &middot; SHELL{% endblock %}
+{% block meta_description %}อะไหล่และอุปกรณ์คอมพิวเตอร์ {{ total_count }} รายการ ค้นหาและกรองตามหมวดหมู่หรือแบรนด์{% endblock %}
+{% block nav_shop %}!text-paper{% endblock %}
+
+{% block content %}
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+  <!-- ── หัวหน้า ── -->
+  <section class="border-b border-line py-12 sm:py-16">
+    <p class="label-latin font-mono text-xs text-red">Catalog</p>
+    <h1 class="mt-3 text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">สินค้าทั้งหมด</h1>
+    <p class="mt-4 max-w-xl text-base leading-relaxed text-ash">
+      อะไหล่และอุปกรณ์คอมพิวเตอร์ {{ total_count|intcomma }} รายการ ทุกชิ้นแสดงสเปกและราคาไว้ครบตั้งแต่หน้ารวม
+    </p>
+  </section>
+
+  <!-- ── แถบค้นหาและตัวกรอง ── -->
+  <section class="py-6" aria-label="ค้นหาและกรองสินค้า">
+    <form method="get" id="filter-form" class="space-y-4">
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-[minmax(0,2fr)_repeat(3,minmax(0,1fr))_auto]">
+
+        <div>
+          <label for="q" class="mb-1.5 block text-xs text-ash">ค้นหา</label>
+          <input type="search" name="q" id="q" value="{{ keyword }}"
+                 placeholder="ชื่อสินค้า หรือ สเปก เช่น DDR5"
+                 autocomplete="off"
+                 class="h-11 w-full border border-line bg-paper px-3 text-sm text-ink placeholder:text-ash focus:border-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-1">
+        </div>
+
+        <div>
+          <label for="category" class="mb-1.5 block text-xs text-ash">หมวดหมู่</label>
+          <select name="category" id="category"
+                  class="h-11 w-full cursor-pointer border border-line bg-paper px-3 text-sm text-ink focus:border-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-1">
+            <option value="">ทุกหมวดหมู่</option>
+            {% for c in categories %}
+              <option value="{{ c.pk }}" {% if selected_category.pk == c.pk %}selected{% endif %}>{{ c.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div>
+          <label for="brand" class="mb-1.5 block text-xs text-ash">แบรนด์</label>
+          <select name="brand" id="brand"
+                  class="h-11 w-full cursor-pointer border border-line bg-paper px-3 text-sm text-ink focus:border-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-1">
+            <option value="">ทุกแบรนด์</option>
+            {% for b in brands %}
+              <option value="{{ b.pk }}" {% if selected_brand.pk == b.pk %}selected{% endif %}>{{ b.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div>
+          <label for="sort" class="mb-1.5 block text-xs text-ash">เรียงตาม</label>
+          <select name="sort" id="sort"
+                  class="h-11 w-full cursor-pointer border border-line bg-paper px-3 text-sm text-ink focus:border-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-1">
+            {% for key, label in sort_options %}
+              <option value="{{ key }}" {% if sort == key %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        {# ปุ่มนี้จำเป็นเมื่อปิด JavaScript — ถ้ามี JS ฟอร์มจะ submit เองอยู่แล้ว #}
+        <div class="flex items-end">
+          <button type="submit"
+                  class="h-11 w-full cursor-pointer border border-ink bg-ink px-6 text-sm font-medium text-paper transition-colors duration-200 hover:bg-red hover:border-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 lg:w-auto">
+            ค้นหา
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- ตัวกรองที่ใช้อยู่ -->
+    <div class="mt-5 flex flex-wrap items-center gap-2">
+      <p class="font-mono text-xs text-ash" role="status" aria-live="polite">
+        {{ total_count|intcomma }} รายการ
+      </p>
+
+      {% if has_filter %}
+        <span aria-hidden="true" class="text-line">|</span>
+
+        {% if keyword %}
+          <span class="inline-flex items-center gap-2 border border-red bg-red-50 py-1 pl-3 pr-2 text-xs text-red">
+            ค้นหา: {{ keyword }}
+          </span>
+        {% endif %}
+        {% if selected_category %}
+          <span class="inline-flex items-center gap-2 border border-red bg-red-50 py-1 px-3 text-xs text-red">
+            {{ selected_category.name }}
+          </span>
+        {% endif %}
+        {% if selected_brand %}
+          <span class="inline-flex items-center gap-2 border border-red bg-red-50 py-1 px-3 text-xs text-red">
+            {{ selected_brand.name }}
+          </span>
+        {% endif %}
+
+        <a href="{% url 'shop:product_list' %}"
+           class="text-xs text-ash underline underline-offset-4 transition-colors duration-200 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2">
+          ล้างตัวกรอง
+        </a>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- ── ตารางสินค้า: เส้นคั่น 1px แทนกรอบการ์ด ── -->
+  {% if page_obj.object_list %}
+    <section aria-label="รายการสินค้า"
+             class="grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {% for product in page_obj %}
+        {% include "shop/_product_card.html" with product=product %}
+      {% endfor %}
+    </section>
+
+    <!-- ── แบ่งหน้า ── -->
+    {% if page_obj.paginator.num_pages > 1 %}
+      <nav aria-label="แบ่งหน้า" class="flex items-center justify-between gap-4 border-x border-b border-line px-5 py-4">
+        {% if page_obj.has_previous %}
+          <a href="?page={{ page_obj.previous_page_number }}{% if base_query %}&amp;{{ base_query }}{% endif %}"
+             class="border border-line px-4 py-2 text-sm transition-colors duration-200 hover:border-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2">
+            <span aria-hidden="true">&larr;</span> ก่อนหน้า
+          </a>
+        {% else %}
+          <span class="cursor-not-allowed border border-line px-4 py-2 text-sm text-line">
+            <span aria-hidden="true">&larr;</span> ก่อนหน้า
+          </span>
+        {% endif %}
+
+        <p class="font-mono text-xs text-ash">
+          <span class="text-ink">{{ page_obj.number }}</span> / {{ page_obj.paginator.num_pages }}
+        </p>
+
+        {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}{% if base_query %}&amp;{{ base_query }}{% endif %}"
+             class="border border-line px-4 py-2 text-sm transition-colors duration-200 hover:border-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2">
+            ถัดไป <span aria-hidden="true">&rarr;</span>
+          </a>
+        {% else %}
+          <span class="cursor-not-allowed border border-line px-4 py-2 text-sm text-line">
+            ถัดไป <span aria-hidden="true">&rarr;</span>
+          </span>
+        {% endif %}
+      </nav>
+    {% endif %}
+
+  {% else %}
+    <!-- ── ไม่พบสินค้า: บอกวิธีแก้ ไม่ใช่แค่บอกว่าว่าง ── -->
+    <section class="border border-line px-6 py-20 text-center">
+      <p class="font-mono text-xs label-latin text-red">No results</p>
+      <h2 class="mt-3 text-2xl font-semibold">ไม่พบสินค้าที่ตรงกับเงื่อนไข</h2>
+      <p class="mx-auto mt-3 max-w-md text-sm leading-relaxed text-ash">
+        ลองใช้คำค้นที่สั้นลง หรือเอาตัวกรองหมวดหมู่กับแบรนด์ออกสักอย่าง แล้วค้นหาอีกครั้ง
+      </p>
+      <a href="{% url 'shop:product_list' %}"
+         class="mt-6 inline-block cursor-pointer bg-red px-6 py-3 text-sm font-medium text-paper transition-colors duration-200 hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2">
+        ดูสินค้าทั้งหมด
+      </a>
+    </section>
+  {% endif %}
+
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+  (function () {
+    var form = document.getElementById('filter-form');
+    if (!form) return;
+
+    var search = document.getElementById('q');
+    var FOCUS_FLAG = 'shop:refocus-search';
+
+    function submitForm() {
+      // ยิงจากหน้า 1 เสมอ ไม่งั้นผลลัพธ์ชุดใหม่จะเปิดค้างที่หน้าเดิมซึ่งอาจไม่มีข้อมูล
+      var page = form.querySelector('input[name="page"]');
+      if (page) page.remove();
+      form.submit();
+    }
+
+    // dropdown: เปลี่ยนแล้วยิงทันที
+    ['category', 'brand', 'sort'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener('change', submitForm);
+    });
+
+    // ช่องค้นหา: หน่วง 450ms แล้วค่อยยิง กันโหลดรัวตอนพิมพ์
+    if (search) {
+      var timer;
+      search.addEventListener('input', function () {
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          try { sessionStorage.setItem(FOCUS_FLAG, '1'); } catch (e) {}
+          submitForm();
+        }, 450);
+      });
+
+      // Enter ต้องยิงทันที ไม่ต้องรอ debounce
+      search.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') clearTimeout(timer);
+      });
+
+      // หลังโหลดหน้าใหม่ คืนโฟกัสให้ช่องค้นหาเพื่อพิมพ์ต่อได้เลย
+      try {
+        if (sessionStorage.getItem(FOCUS_FLAG)) {
+          sessionStorage.removeItem(FOCUS_FLAG);
+          search.focus();
+          var value = search.value;
+          search.value = '';
+          search.value = value; // ดันเคอร์เซอร์ไปท้ายข้อความ
+        }
+      } catch (e) {}
+    }
+  })();
+</script>
+{% endblock %}

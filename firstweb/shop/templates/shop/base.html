@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}SHELL{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}ร้านอะไหล่และอุปกรณ์คอมพิวเตอร์ SHELL{% endblock %}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap">
+
+  <!-- Tailwind Play CDN: สะดวกสำหรับ dev/เรียน แต่ production ควรติดตั้งผ่าน npm แล้ว build -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // โทนสีตามบรีฟ: ขาว 70% (paper/bone) / ดำ 20% (ink/ash/line) / แดง 10% (red)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#FFFFFF',
+            bone:  '#F6F6F5',
+            ink:   '#0A0A0A',
+            ash:   '#6B6B6B',
+            line:  '#E5E5E5',
+            red: {
+              DEFAULT: '#D7263D',   // 4.96:1 บนพื้นขาว ผ่าน WCAG AA
+              600:     '#B01B2E',
+              50:      '#FDF2F4',
+            },
+          },
+          fontFamily: {
+            sans: ['"IBM Plex Sans Thai"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+    /* letter-spacing ใช้กับ label ภาษาอังกฤษ/ตัวเลขเท่านั้น ไม่ใช้กับข้อความไทย */
+    .label-latin { letter-spacing: 0.14em; text-transform: uppercase; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+  {% block extra_head %}{% endblock %}
+</head>
+
+<body class="min-h-screen bg-paper font-sans text-ink antialiased flex flex-col">
+
+  <a href="#main"
+     class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-ink focus:px-4 focus:py-2 focus:text-paper">
+    ข้ามไปยังเนื้อหาหลัก
+  </a>
+
+  <!-- ── แถบดำบน: ส่วนหนึ่งของงบสีดำ 20% ── -->
+  <header class="sticky top-0 z-40 bg-ink text-paper">
+    <div class="mx-auto flex h-14 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
+      <a href="{% url 'shop:product_list' %}"
+         class="font-mono text-base font-semibold tracking-tight text-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 focus-visible:ring-offset-ink">
+        SHELL<span class="text-red">.</span>
+      </a>
+
+      <nav aria-label="เมนูหลัก" class="flex items-center gap-1 text-sm">
+        {% block nav %}{% endblock %}
+        <a href="{% url 'shop:product_list' %}"
+           class="relative px-3 py-2 text-paper/70 transition-colors duration-200 hover:text-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 focus-visible:ring-offset-ink {% block nav_shop %}{% endblock %}">
+          สินค้า
+        </a>
+        <a href="/"
+           class="px-3 py-2 text-paper/70 transition-colors duration-200 hover:text-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 focus-visible:ring-offset-ink">
+          หน้าแรก
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="flex-1">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- ── ฟุตเตอร์ดำ: ปิดงบสีดำ 20% ── -->
+  <footer class="mt-24 bg-ink text-paper">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="font-mono text-lg font-semibold">SHELL<span class="text-red">.</span></p>
+          <p class="mt-2 max-w-sm text-sm leading-relaxed text-paper/60">
+            อะไหล่และอุปกรณ์คอมพิวเตอร์ คัดสเปกมาแล้ว ราคาแสดงตรงไปตรงมา
+          </p>
+        </div>
+        <p class="font-mono text-xs text-paper/50">
+          Django {% now "Y" %} &middot; ข้อมูลสินค้าจากฐานข้อมูลจริง
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>
